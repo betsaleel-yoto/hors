@@ -1641,6 +1641,27 @@ function renderHome(lang, data) {
     poster: "img/mining-site.png",
   });
 
+  const manifestoTexts = {
+    fr: {
+      quote: "« Nous croyons que l’excellence industrielle commence par la rigueur et le respect inconditionnel de la parole donnée. »",
+      author: "HOREB — THE HOUSE OF EXCELLENCE • LUBUMBASHI, RDC"
+    },
+    en: {
+      quote: "“We believe industrial excellence begins with unyielding precision and absolute commitment to our word.”",
+      author: "HOREB — THE HOUSE OF EXCELLENCE • LUBUMBASHI, DRC"
+    },
+    zh: {
+      quote: "“我们坚信，工业的卓越始于严谨，以及对承诺的绝对遵守。”",
+      author: "HOREB — 卓越之屋 • 刚果（金）卢本巴希"
+    },
+    sw: {
+      quote: "“Tunaamini kuwa ubora wa viwanda unaanza na umakini na kuheshimu ahadi zetu kikamilifu.”",
+      author: "HOREB — NYUMBA YA UBORA • LUBUMBASHI, RDC"
+    }
+  };
+
+  const currentManifesto = manifestoTexts[lang] || manifestoTexts.fr;
+
   return `
     ${heroHtml}
 
@@ -1652,6 +1673,7 @@ function renderHome(lang, data) {
         </div>
       </section>
 
+      <!-- Section Piliers d'Excellence -->
       <section class="section">
         <div class="shell">
           ${sectionHead(
@@ -1665,6 +1687,7 @@ function renderHome(lang, data) {
         </div>
       </section>
 
+      <!-- Section Récit & Ancrage Katanga -->
       <section class="section">
         <div class="shell">
           <div class="split split--2">
@@ -1700,10 +1723,56 @@ function renderHome(lang, data) {
         </div>
       </section>
 
+      <!-- Section Manifeste Sombre Immersif -->
+      <section class="section section--tight">
+        <div class="shell">
+          <div class="manifesto-section reveal">
+            <blockquote class="manifesto-quote">${currentManifesto.quote}</blockquote>
+            <div class="manifesto-author">${currentManifesto.author}</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Processus & Méthodologie -->
+      <section class="section">
+        <div class="shell">
+          ${sectionHead(
+            "Méthodologie Opérationnelle",
+            "Un cadre d'exécution en 4 étapes clés.",
+            "De la qualification du besoin jusqu'à la livraison sur site minier.",
+            false,
+            40
+          )}
+          <div class="timeline-grid">
+            <div class="timeline-step reveal" style="--delay:60ms">
+              <span class="timeline-num">01</span>
+              <h3 class="timeline-title">Diagnostic & Alignement</h3>
+              <p class="timeline-desc">Analyse approfondie des spécifications techniques et évaluation des contraintes terrain.</p>
+            </div>
+            <div class="timeline-step reveal" style="--delay:120ms">
+              <span class="timeline-num">02</span>
+              <h3 class="timeline-title">Sourçage & Conformité</h3>
+              <p class="timeline-desc">Sélection rigoureuse des réactifs et matériaux répondant aux normes internationales.</p>
+            </div>
+            <div class="timeline-step reveal" style="--delay:180ms">
+              <span class="timeline-num">03</span>
+              <h3 class="timeline-title">Déploiement Logistique</h3>
+              <p class="timeline-desc">Acheminement sécurisé, gestion douanière et coordination de la flotte jusqu'au site.</p>
+            </div>
+            <div class="timeline-step reveal" style="--delay:240ms">
+              <span class="timeline-num">04</span>
+              <h3 class="timeline-title">Suivi & Restitution</h3>
+              <p class="timeline-desc">Traçabilité complète, rapports d'audit et support opérationnel continu.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       ${ctaBand(data.cta, lang)}
     </div>
   `;
 }
+
 
 function renderAbout(lang, data) {
   const cards = data.cards.map((item, index) => cardHtml(item, index * 70)).join("");
