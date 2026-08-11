@@ -14,7 +14,19 @@ const pageFiles = {
   contact: "contact.html",
 };
 
-const pageOrder = ["home", "about", "services", "values", "contact"];
+const navItems = [
+  { key: "home", page: "home" },
+  { key: "about", page: "about" },
+  { key: "services", page: "services" },
+  { key: "investors", page: "home", hash: "investment-opportunities" },
+  { key: "suppliers", page: "home", hash: "supplier-solutions" },
+  { key: "projects", page: "home", hash: "projects" },
+  { key: "gallery", page: "home", hash: "gallery" },
+  { key: "news", page: "home", hash: "news" },
+  { key: "contact", page: "contact" },
+];
+
+const footerItems = navItems.filter((item) => item.key !== "projects" && item.key !== "news");
 
 const icons = {
   spark: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.1 6.1L20 10l-5.9 1.9L12 18l-2.1-6.1L4 10l5.9-1.9L12 2z"/><path d="M4 18l1.4.5L6 20l.6-1.5L8 18l-1.4-.5L6 16l-.6 1.5L4 18z"/></svg>`,
@@ -41,19 +53,23 @@ const copy = {
       menu: "Menu",
       language: "Langue",
       footerNote: "Disponible en français, anglais, chinois et swahili.",
-      footerTag: "Société de services miniers dirigée par une femme • Lubumbashi, RDC.",
+      footerTag: "Partenaire stratégique en chaîne d’approvisionnement, opérations et accès marché • Lubumbashi, RDC.",
     },
     nav: {
       home: "Accueil",
       about: "À propos",
       services: "Services",
-      values: "Valeurs",
+      investors: "Opportunités investisseurs",
+      suppliers: "Fournisseurs",
+      projects: "Projets",
+      gallery: "Galerie",
+      news: "Actualités",
       contact: "Contact",
     },
     pages: {
       home: {
-        metaTitle: "Horeb | L'Architecture de l'Excellence",
-        metaDescription: "Horeb - Services miniers et sous-traitance industrielle de premier ordre au Grand Katanga. Leadership féminin, rigueur et excellence opérationnelle.",
+        metaTitle: "Horeb | Votre partenaire d’affaires en RDC",
+        metaDescription: "Horeb connecte investisseurs internationaux et fournisseurs aux opportunités en RDC grâce à la chaîne d’approvisionnement, la gestion opérationnelle et le support minier.",
         hero: {
           eyebrow: "Leadership minier & industriel en RDC",
           title: "L'Architecture de l'Excellence.",
@@ -110,7 +126,7 @@ const copy = {
           eyebrow: "Notre Identité",
           title: "Un pont solide entre rigueur locale et exigences globales.",
           copy: [
-            "Basée à Lubumbashi au Haut-Katanga, Horeb est une entreprise congolaise spécialisée dans la sous-traitance et les services miniers de haute précision.",
+            "Basée à Lubumbashi au Haut-Katanga, Horeb est une entreprise congolaise spécialisée dans la chaîne d’approvisionnement, la gestion opérationnelle et le support industriel.",
             "Nous combinons une connaissance intime du terrain avec des normes d'exécution internationales pour accompagner nos partenaires en toute sérénité.",
           ],
           bullets: ["Processus sans friction", "Communication transparente", "Respect strict des normes environnementales et humaines"],
@@ -120,17 +136,17 @@ const copy = {
         cta: {
           eyebrow: "Collaborer avec Horeb",
           title: "Besoin d'un partenaire industriel fiable et réactif ?",
-          copy: "Nos équipes sont à votre disposition pour vous accompagner dans vos opérations minières et logistiques.",
+          copy: "Nos équipes sont à votre disposition pour vous accompagner dans vos opérations de supply chain, de logistique et de support industriel.",
           button: "Démarrer un projet",
         },
       },
       about: {
         metaTitle: "Horeb | À propos de nous",
-        metaDescription: "Découvrez l'histoire de Horeb, notre leadership féminin à Lubumbashi et notre mission d'excellence dans le secteur minier congolais.",
+        metaDescription: "Découvrez Horeb, partenaire stratégique en chaîne d’approvisionnement, accès marché et gestion opérationnelle basé à Lubumbashi.",
         hero: {
           eyebrow: "Histoire & Leadership",
           title: "Ancrée à Lubumbashi. Reconnue au Katanga.",
-          subtitle: "Une maîtrise du secteur industriel congolais portée par un leadership féminin d'exception.",
+          subtitle: "Une maîtrise de l’écosystème industriel congolais portée par un leadership féminin d'exception.",
           chips: ["Lubumbashi", "Haut-Katanga", "Direction Féminine"],
           imageBadge: "Équipe Dirigeante",
           imageCaption: "Rigueur, discrétion et professionnalisme à chaque étape.",
@@ -139,17 +155,17 @@ const copy = {
           {
             icon: "pin",
             title: "Siège social",
-            text: "Lubumbashi, Haut-Katanga, au cœur du bassin minier du Grand Katanga en RDC.",
+            text: "Lubumbashi, Haut-Katanga, au cœur du corridor industriel du Grand Katanga en RDC.",
           },
           {
             icon: "stack",
             title: "Cœur de métier",
-            text: "Services aux entreprises minières, sous-traitance industrielle, logistique et chaîne d'approvisionnement.",
+            text: "Chaîne d’approvisionnement, logistique, accès marché, gestion opérationnelle et support industriel.",
           },
           {
             icon: "globe",
             title: "Partenaires",
-            text: "Compagnies minières internationales, sous-traitants majeurs, investisseurs et acteurs industriels.",
+            text: "Investisseurs internationaux, fournisseurs industriels, compagnies minières et grands contractants.",
           },
           {
             icon: "users",
@@ -171,10 +187,10 @@ const copy = {
       },
       services: {
         metaTitle: "Horeb | Nos Services & Expertises",
-        metaDescription: "Approvisionnement, logistique, soufre, produits chimiques, forage, terrassement et support clé en main pour le secteur minier.",
+        metaDescription: "Chaîne d’approvisionnement, logistique, soufre, produits chimiques, accès marché et support opérationnel clé en main en RDC.",
         hero: {
           eyebrow: "Pôles d'Expertise",
-          title: "Des services miniers et logistiques sur-mesure.",
+          title: "Des solutions supply chain et opérationnelles sur-mesure.",
           subtitle: "Une gamme d'expertises calibrées pour les exigences des projets industriels majeurs.",
           chips: ["Approvisionnement", "Logistique", "Ingénierie Clé en Main"],
           imageBadge: "Excellence Opérationnelle",
@@ -360,19 +376,23 @@ const copy = {
       menu: "Menu",
       language: "Language",
       footerNote: "Available in French, English, Chinese, and Swahili.",
-      footerTag: "Women-led mining services company • Lubumbashi, DRC.",
+      footerTag: "Strategic partner for supply chain, operations, and market entry • Lubumbashi, DRC.",
     },
     nav: {
       home: "Home",
-      about: "About",
+      about: "About Us",
       services: "Services",
-      values: "Values",
+      investors: "Investor Opportunities",
+      suppliers: "Suppliers",
+      projects: "Projects",
+      gallery: "Gallery",
+      news: "News",
       contact: "Contact",
     },
     pages: {
       home: {
-        metaTitle: "Horeb | The Architecture of Excellence",
-        metaDescription: "Horeb - Premier mining services and industrial subcontracting in Grand Katanga, DRC.",
+        metaTitle: "Horeb | Your Business Partner in DRC",
+        metaDescription: "Horeb connects international investors and suppliers with DRC opportunities through supply chain solutions, operational management, and mining support.",
         hero: {
           eyebrow: "Mining & Industrial Leadership in DRC",
           title: "The Architecture of Excellence.",
@@ -429,7 +449,7 @@ const copy = {
           eyebrow: "Our Identity",
           title: "A strong bridge between local execution and global standards.",
           copy: [
-            "Based in Lubumbashi, Haut-Katanga, Horeb is a Congolese company specializing in high-precision mining services and subcontracting.",
+            "Based in Lubumbashi, Haut-Katanga, Horeb is a Congolese company specializing in supply chain, operational management, and industrial support.",
             "We combine deep local knowledge with international standards to support industrial partners with complete confidence.",
           ],
           bullets: ["Frictionless processes", "Transparent communication", "Strict environmental and human compliance"],
@@ -445,11 +465,11 @@ const copy = {
       },
       about: {
         metaTitle: "Horeb | About Us",
-        metaDescription: "Learn about Horeb's history, women-led leadership in Lubumbashi, and commitment to excellence in DRC mining.",
+        metaDescription: "Learn about Horeb, a strategic supply chain, market-entry, and operational management partner based in Lubumbashi.",
         hero: {
           eyebrow: "History & Leadership",
           title: "Rooted in Lubumbashi. Trusted in Katanga.",
-          subtitle: "A mastery of Congolese industry guided by an exceptional women-led management team.",
+          subtitle: "A mastery of the Congolese industrial ecosystem guided by an exceptional women-led management team.",
           chips: ["Lubumbashi", "Haut-Katanga", "Women Leadership"],
           imageBadge: "Executive Board",
           imageCaption: "Precision, discretion, and professionalism at every step.",
@@ -458,17 +478,17 @@ const copy = {
           {
             icon: "pin",
             title: "Headquarters",
-            text: "Lubumbashi, Haut-Katanga, at the heart of the Grand Katanga mining basin in DRC.",
+            text: "Lubumbashi, Haut-Katanga, at the heart of the Grand Katanga industrial corridor in DRC.",
           },
           {
             icon: "stack",
             title: "Core Business",
-            text: "Mining support services, industrial subcontracting, logistics, and supply chain management.",
+            text: "Supply chain management, logistics, market entry, operational management, and industrial support.",
           },
           {
             icon: "globe",
             title: "Partners",
-            text: "International mining corporations, major contractors, strategic investors, and industrial suppliers.",
+            text: "International investors, industrial suppliers, mining corporations, and major contractors.",
           },
           {
             icon: "users",
@@ -493,7 +513,7 @@ const copy = {
         metaDescription: "Procurement, logistics, sulfur, chemicals, drilling, earthworks, and turnkey support.",
         hero: {
           eyebrow: "Expertise Pillars",
-          title: "Tailored mining and logistics services.",
+          title: "Tailored supply chain and operational solutions.",
           subtitle: "A comprehensive range of expert solutions calibrated for major industrial projects.",
           chips: ["Procurement", "Logistics", "Turnkey Support"],
           imageBadge: "Operational Excellence",
@@ -679,19 +699,23 @@ const copy = {
       menu: "菜单",
       language: "语言",
       footerNote: "支持法语、英语、中文和斯瓦希里语。",
-      footerTag: "来自刚果（金）卢本巴希的女性领导矿业服务公司。",
+      footerTag: "供应链、运营管理与市场进入的战略合作伙伴 • 刚果（金）卢本巴希。",
     },
     nav: {
       home: "首页",
       about: "关于",
       services: "服务",
-      values: "价值观",
+      investors: "投资机会",
+      suppliers: "供应商",
+      projects: "项目",
+      gallery: "图库",
+      news: "新闻",
       contact: "联系",
     },
     pages: {
       home: {
-        metaTitle: "Horeb | 卓越架构",
-        metaDescription: "Horeb - 刚果（金）大加丹加地区领先的矿业服务与工业分包公司。",
+        metaTitle: "Horeb | 您在刚果（金）的商业伙伴",
+        metaDescription: "Horeb 通过供应链解决方案、运营管理和矿业支持，将国际投资者与供应商连接到刚果（金）的机会。",
         hero: {
           eyebrow: "刚果（金）矿业与工业领导力",
           title: "卓越的架构。",
@@ -748,7 +772,7 @@ const copy = {
           eyebrow: "我们的身份",
           title: "本地高标准与国际规范之间的坚实桥梁。",
           copy: [
-            "Horeb 总位于上加丹加省卢本巴希，是一家专注于高精度矿业服务和分包的刚果公司。",
+            "Horeb 总部位于上加丹加省卢本巴希，是一家专注于供应链、运营管理和工业支持的刚果公司。",
             "我们将对本地情况的深入了解与国际执行标准相结合，全心全意支持工业合作伙伴。",
           ],
           bullets: ["无摩擦流程", "透明化沟通", "严格遵守环境与人类标准"],
@@ -768,7 +792,7 @@ const copy = {
         hero: {
           eyebrow: "历史与领导力",
           title: "扎根卢本巴希，赢在大加丹加。",
-          subtitle: "融合对刚果工业领域的深厚理解与现代女性管理风格。",
+          subtitle: "以卓越女性管理团队为引领，深刻理解刚果工业生态系统。",
           chips: ["卢本巴希", "上加丹加", "女性领导力"],
           imageBadge: "管理层团队",
           imageCaption: "在每一步中保持精准、克制与专业。",
@@ -777,17 +801,17 @@ const copy = {
           {
             icon: "pin",
             title: "公司总部",
-            text: "刚果（金）上加丹加省卢本巴希，大加丹加矿业盆地的核心地带。",
+            text: "刚果（金）上加丹加省卢本巴希，位于大加丹加工业走廊核心地带。",
           },
           {
             icon: "stack",
             title: "核心业务",
-            text: "矿业支持服务、工业分包、物流与供应链管理。",
+            text: "供应链管理、物流、市场进入、运营管理与工业支持。",
           },
           {
             icon: "globe",
             title: "合作伙伴",
-            text: "国际矿业公司、大型承包商、战略投资者与工业供应商。",
+            text: "国际投资者、工业供应商、矿业企业和大型承包商。",
           },
           {
             icon: "users",
@@ -812,7 +836,7 @@ const copy = {
         metaDescription: "采购、物流、硫磺、化学品、钻探、土方工程及交钥匙支持。",
         hero: {
           eyebrow: "专业领域",
-          title: "定制矿业与物流服务。",
+          title: "定制供应链与运营解决方案。",
           subtitle: "结构化、清晰且高效的服务组合。",
           chips: ["采购", "物流", "交钥匙支持"],
           imageBadge: "卓越运营",
@@ -998,19 +1022,23 @@ const copy = {
       menu: "Menyu",
       language: "Lugha",
       footerNote: "Inapatikana kwa Kifaransa, Kiingereza, Kichina na Kiswahili.",
-      footerTag: "Kampuni ya huduma za uchimbaji inayoongozwa na wanawake • Lubumbashi, DRC.",
+      footerTag: "Mshirika wa kimkakati katika mnyororo wa ugavi, uendeshaji na kuingia sokoni • Lubumbashi, DRC.",
     },
     nav: {
       home: "Nyumbani",
       about: "Kuhusu",
       services: "Huduma",
-      values: "Thamani",
+      investors: "Fursa za Wawekezaji",
+      suppliers: "Wasambazaji",
+      projects: "Miradi",
+      gallery: "Matunzio",
+      news: "Habari",
       contact: "Mawasiliano",
     },
     pages: {
       home: {
-        metaTitle: "Horeb | Muundo wa Ubora",
-        metaDescription: "Horeb - Huduma za uchimbaji madini na kandarasi za viwandani nchini DRC.",
+        metaTitle: "Horeb | Mshirika Wako wa Biashara DRC",
+        metaDescription: "Horeb inaunganisha wawekezaji na wasambazaji wa kimataifa na fursa nchini DRC kupitia mnyororo wa ugavi, usimamizi wa uendeshaji na msaada wa sekta ya migodi.",
         hero: {
           eyebrow: "Uongozi wa Uchimbaji na Viwanda nchini DRC",
           title: "Muundo wa Ubora.",
@@ -1067,7 +1095,7 @@ const copy = {
           eyebrow: "Utambulisho Wetu",
           title: "Daraja imara kati ya utekelezaji wa ndani na viwango vya kimataifa.",
           copy: [
-            "Makao makuu yakiwa Lubumbashi, Haut-Katanga, Horeb ni kampuni ya Kongo inayojumuisha huduma za uchimbaji na kandarasi za usahihi wa juu.",
+            "Makao makuu yakiwa Lubumbashi, Haut-Katanga, Horeb ni kampuni ya Kongo inayolenga mnyororo wa ugavi, usimamizi wa uendeshaji na msaada wa viwanda.",
             "Tunachanganya ujuzi wa ndani na viwango vya kimataifa ili kusaidia washirika wa viwandani kwa kujiamini kamili.",
           ],
           bullets: ["Michakato isiyo na msuguano", "Mawasiliano ya wazi", "Uzingatiaji mkali wa mazingira na binadamu"],
@@ -1083,11 +1111,11 @@ const copy = {
       },
       about: {
         metaTitle: "Horeb | Kuhusu Sisi",
-        metaDescription: "Jifunze kuhusu historia ya Horeb, uongozi wa wanawake huko Lubumbashi.",
+        metaDescription: "Jifunze kuhusu Horeb, mshirika wa kimkakati katika mnyororo wa ugavi, kuingia sokoni na usimamizi wa uendeshaji huko Lubumbashi.",
         hero: {
           eyebrow: "Historia na Uongozi",
           title: "Imetoka Lubumbashi. Inaaminika Katanga.",
-          subtitle: "Uzoefu wa sekta ya viwanda ya Kongo ukiongozwa na wanawake watendaji.",
+          subtitle: "Uelewa wa mfumo wa viwanda wa Kongo ukiongozwa na timu bora ya wanawake watendaji.",
           chips: ["Lubumbashi", "Haut-Katanga", "Uongozi wa Wanawake"],
           imageBadge: "Timu ya Watendaji",
           imageCaption: "Usahihi, utulivu na umakini katika kila hatua.",
@@ -1096,17 +1124,17 @@ const copy = {
           {
             icon: "pin",
             title: "Makao Makuu",
-            text: "Lubumbashi, Haut-Katanga, katikati ya bonde la uchimbaji madini la Grand Katanga nchini DRC.",
+            text: "Lubumbashi, Haut-Katanga, katikati ya ukanda wa viwanda wa Grand Katanga nchini DRC.",
           },
           {
             icon: "stack",
             title: "Kazi Kuu",
-            text: "Huduma za uchimbaji madini, kandarasi za viwandani, logistics na usimamizi wa ugavi.",
+            text: "Usimamizi wa mnyororo wa ugavi, logistics, kuingia sokoni, usimamizi wa uendeshaji na msaada wa viwanda.",
           },
           {
             icon: "globe",
             title: "Washirika",
-            text: "Kampuni za kimataifa za uchimbaji, wakandarasi wakubwa, wawekezaji na wasambazaji wa viwanda.",
+            text: "Wawekezaji wa kimataifa, wasambazaji wa viwanda, kampuni za migodi na wakandarasi wakubwa.",
           },
           {
             icon: "users",
@@ -1131,7 +1159,7 @@ const copy = {
         metaDescription: "Ununuzi, usafirishaji, sulfuri, kemikali, uchimbaji na msaada wa turnkey.",
         hero: {
           eyebrow: "Nguzo za Utaalamu",
-          title: "Huduma za uchimbaji na usafirishaji zilizorekebishwa.",
+          title: "Suluhisho maalum za mnyororo wa ugavi na uendeshaji.",
           subtitle: "Huduma zilizopangwa, zilizo wazi na zenye ufanisi wa juu.",
           chips: ["Ununuzi", "Usafirishaji", "Msaada wa Turnkey"],
           imageBadge: "Ubora wa Uendeshaji",
@@ -1312,6 +1340,509 @@ const copy = {
   },
 };
 
+const homeExperience = {
+  fr: {
+    hero: {
+      eyebrow: "La RDC est ouverte aux opportunités",
+      title: "La République démocratique du Congo est ouverte aux opportunités",
+      subtitle: "Votre partenaire d’affaires de confiance dans l’industrie minière africaine.",
+      lines: [
+        "Connecter les investisseurs mondiaux.",
+        "Renforcer les fournisseurs internationaux.",
+        "Livrer l’excellence.",
+      ],
+      primary: "Devenir partenaire",
+      secondary: "Parler à notre équipe",
+      chips: ["Supply chain", "Accès marché", "Gestion opérationnelle"],
+    },
+    opportunity: {
+      eyebrow: "Pourquoi la RDC ?",
+      title: "Un marché stratégique au cœur de la transition énergétique.",
+      copy: "Le Grand Katanga concentre ressources, industrie et besoins opérationnels. Horeb aide les partenaires sérieux à transformer cette opportunité en exécution maîtrisée.",
+      imageBadge: "Katanga • RDC",
+      imageCaption: "Ressources critiques, infrastructures minières et demande croissante en partenaires fiables.",
+      items: [
+        {
+          icon: "globe",
+          title: "Réserves de cuivre et cobalt de classe mondiale",
+          text: "Des minerais critiques qui alimentent véhicules électriques, technologies industrielles et énergies renouvelables.",
+        },
+        {
+          icon: "pin",
+          title: "Hub minier stratégique",
+          text: "Le Grand Katanga fait partie des régions industrielles les plus dynamiques d’Afrique centrale.",
+        },
+        {
+          icon: "stack",
+          title: "Opportunités en forte croissance",
+          text: "Demande élevée en sous-traitants fiables, logisticiens, fournisseurs industriels et partenaires terrain.",
+        },
+      ],
+    },
+    meet: {
+      eyebrow: "Rencontrer Horeb",
+      title: "Nous sommes plus qu’un prestataire de services",
+      partner: "Nous sommes votre partenaire stratégique.",
+      businessPartner: "NOUS SOMMES VOTRE PARTENAIRE D’AFFAIRES",
+      copy: [
+        "Basée à Lubumbashi, Horeb connecte les investisseurs internationaux et les fournisseurs aux opportunités de la République démocratique du Congo.",
+        "Notre équipe expérimentée fournit la gestion opérationnelle clé en main, des solutions de chaîne d’approvisionnement et des services de support minier permettant à nos partenaires d’opérer avec confiance dans l’un des marchés miniers les plus prometteurs d’Afrique.",
+      ],
+      button: "En savoir plus",
+    },
+    services: {
+      eyebrow: "Nos services",
+      title: "Une chaîne d’approvisionnement pilotée de bout en bout.",
+      copy: "Horeb n’est pas positionnée comme une entreprise minière : nous sommes le partenaire opérationnel qui rend l’accès au marché, la fourniture et l’exécution possibles.",
+      groups: [
+        {
+          icon: "stack",
+          title: "Supply Chain",
+          items: ["Soufre granulaire", "Acide sulfurique", "Approvisionnement industriel", "Produits chimiques miniers"],
+        },
+        {
+          icon: "drill",
+          title: "Support minier",
+          items: ["Forage", "Terrassement", "Location d’équipements", "Transport", "Logistique", "Services de site"],
+        },
+        {
+          icon: "compass",
+          title: "Solutions investisseurs",
+          items: ["Entrée marché", "Gestion opérationnelle", "Supervision de projet", "Représentation locale", "Conformité", "Gestion des risques"],
+        },
+      ],
+    },
+    why: {
+      eyebrow: "Pourquoi Horeb ?",
+      title: "Le partenaire local qui protège vos opérations.",
+      items: [
+        { icon: "pin", title: "Expertise locale", text: "Connaissance profonde de l’écosystème minier congolais." },
+        { icon: "shield", title: "Transparence", text: "Reporting clair, responsabilité et traçabilité des opérations." },
+        { icon: "spark", title: "Excellence opérationnelle", text: "Standards internationaux appliqués aux réalités du terrain." },
+        { icon: "users", title: "Relations fiables", text: "Réseau solide auprès des acteurs industriels et miniers." },
+        { icon: "truck", title: "Équipes expérimentées", text: "Professionnels mobilisables sur le terrain." },
+        { icon: "compass", title: "Solutions clé en main", text: "Nous gérons l’opérationnel pendant que vous développez votre croissance." },
+      ],
+    },
+    industries: {
+      eyebrow: "Industries accompagnées",
+      title: "Des secteurs où la fiabilité terrain fait la différence.",
+      items: ["Mines de cuivre", "Mines de cobalt", "Fourniture industrielle", "Contractants miniers", "Logistique", "Infrastructure", "Construction", "Énergie"],
+    },
+    investment: {
+      eyebrow: "Opportunités d’investissement",
+      title: "Vous souhaitez investir ou vous implanter en RDC ?",
+      copy: "Que vous soyez un investisseur à la recherche d’un partenaire opérationnel ou un fournisseur qui s’étend en Afrique centrale, Horeb fournit des solutions complètes d’entrée marché.",
+      punchline: "Nous devenons votre équipe sur le terrain.",
+      investorButton: "Devenir investisseur",
+      supplierButton: "Devenir fournisseur",
+      supplierTitle: "Solutions pour fournisseurs internationaux",
+      supplierCopy: "Horeb facilite votre sourcing, vos démarches locales, votre représentation, votre logistique et vos livraisons vers les sites industriels.",
+    },
+    process: {
+      eyebrow: "Notre processus",
+      title: "Une méthode claire, du premier échange à la croissance.",
+      items: ["Découverte", "Consultation", "Planification", "Exécution", "Opérations", "Croissance"],
+    },
+    gallery: {
+      eyebrow: "Galerie",
+      title: "Une présence visuelle forte et crédible.",
+      copy: "Le site est prêt à recevoir davantage de photos réelles : sites, équipements, entrepôts, réunions et opérations terrain.",
+      items: [
+        { src: "img/mining-site.png", badge: "Sites miniers", alt: "Site minier au Katanga" },
+        { src: "img/logistics-fleet.png", badge: "Logistique", alt: "Flotte logistique Horeb" },
+        { src: "img/chemical-lab.png", badge: "Produits industriels", alt: "Contrôle qualité industriel" },
+        { src: "img/women-executives.png", badge: "Équipe", alt: "Équipe Horeb" },
+        { src: "img/team-collaboration-clean.jpg", badge: "Partenariats", alt: "Réunion de partenariat" },
+        { src: "img/horeb-flyer.png", badge: "Profil société", alt: "Flyer Horeb House of Excellence" },
+      ],
+    },
+    news: {
+      eyebrow: "Actualités & insights",
+      title: "Un espace prêt pour les mises à jour corporate.",
+      items: [
+        "Tendances de la chaîne d’approvisionnement minière",
+        "Opportunités d’investissement au Grand Katanga",
+        "Notes opérationnelles pour fournisseurs internationaux",
+      ],
+    },
+    testimonials: {
+      eyebrow: "Témoignages",
+      title: "La confiance se construit par l’exécution.",
+      quote: "En tant que partenaire international, l’expertise locale de Horeb a rendu notre entrée marché fluide.",
+      note: "Des témoignages clients réels pourront être ajoutés dès qu’ils seront disponibles.",
+    },
+    contact: {
+      eyebrow: "Contact",
+      title: "Construisons votre réussite en RDC.",
+      copy: "Parlez à notre équipe à Lubumbashi pour une consultation investisseur, fournisseur ou opérationnelle.",
+      button: "Réserver un échange",
+      location: "Lubumbashi",
+      phone: "+243 852 224 185",
+      email: "Joelle-horebhe@outlook.com",
+    },
+  },
+  en: {
+    hero: {
+      eyebrow: "The DRC is open for opportunity",
+      title: "The Democratic Republic of Congo is open for opportunity",
+      subtitle: "Your trusted business partner in Africa's mining industry.",
+      lines: [
+        "Connecting global investors.",
+        "Empowering international suppliers.",
+        "Delivering excellence.",
+      ],
+      primary: "Become a Partner",
+      secondary: "Talk to Our Team",
+      chips: ["Supply chain", "Market entry", "Operational management"],
+    },
+    opportunity: {
+      eyebrow: "Why invest in the DRC?",
+      title: "A strategic market at the heart of the energy transition.",
+      copy: "Grand Katanga combines resources, industry, and urgent operational needs. Horeb helps serious partners turn opportunity into controlled execution.",
+      imageBadge: "Katanga • DRC",
+      imageCaption: "Critical resources, mining infrastructure, and growing demand for reliable partners.",
+      items: [
+        {
+          icon: "globe",
+          title: "World-class copper and cobalt reserves",
+          text: "Critical minerals powering electric vehicles, industrial technologies, and renewable energy.",
+        },
+        {
+          icon: "pin",
+          title: "Strategic mining hub",
+          text: "Grand Katanga is one of Central Africa's fastest-growing industrial regions.",
+        },
+        {
+          icon: "stack",
+          title: "Growing opportunities",
+          text: "Strong demand for reliable subcontractors, logistics providers, industrial suppliers, and field partners.",
+        },
+      ],
+    },
+    meet: {
+      eyebrow: "Meet Horeb",
+      title: "We Are More Than a Service Provider",
+      partner: "We are your strategic business partner.",
+      businessPartner: "WE ARE YOUR BUSINESS PARTNER",
+      copy: [
+        "Based in Lubumbashi, Horeb connects international investors and suppliers with opportunities in the Democratic Republic of Congo.",
+        "Our experienced team delivers turnkey operational management, supply chain solutions, and mining support services that allow our partners to operate confidently in one of Africa's most promising mining markets.",
+      ],
+      button: "Learn More",
+    },
+    services: {
+      eyebrow: "Our services",
+      title: "End-to-end supply chain, managed with confidence.",
+      copy: "Horeb is not positioned as a mining company: we are the operational partner that makes market entry, supply, and execution possible.",
+      groups: [
+        {
+          icon: "stack",
+          title: "Supply Chain",
+          items: ["Granular sulfur", "Sulfuric acid", "Industrial procurement", "Mining chemicals"],
+        },
+        {
+          icon: "drill",
+          title: "Mining Support",
+          items: ["Drilling", "Earthworks", "Equipment rental", "Transport", "Logistics", "Site services"],
+        },
+        {
+          icon: "compass",
+          title: "Investor Solutions",
+          items: ["Market entry", "Operational management", "Project oversight", "Local representation", "Compliance", "Risk management"],
+        },
+      ],
+    },
+    why: {
+      eyebrow: "Why Horeb?",
+      title: "The local partner that protects your operations.",
+      items: [
+        { icon: "pin", title: "Local expertise", text: "Deep knowledge of the Congolese mining ecosystem." },
+        { icon: "shield", title: "Transparency", text: "Clear reporting, accountability, and operational traceability." },
+        { icon: "spark", title: "Operational excellence", text: "International standards adapted to field realities." },
+        { icon: "users", title: "Trusted relationships", text: "Strong network across industrial and mining stakeholders." },
+        { icon: "truck", title: "Experienced workforce", text: "Professional teams ready to mobilize on the ground." },
+        { icon: "compass", title: "Turnkey solutions", text: "We manage operations while you focus on growth." },
+      ],
+    },
+    industries: {
+      eyebrow: "Industries we support",
+      title: "Sectors where field reliability makes the difference.",
+      items: ["Copper mining", "Cobalt mining", "Industrial supply", "Mining contractors", "Logistics", "Infrastructure", "Construction", "Energy"],
+    },
+    investment: {
+      eyebrow: "Investment opportunities",
+      title: "Looking to invest or expand in the DRC?",
+      copy: "Whether you are an investor seeking operational partners or a supplier expanding into Central Africa, Horeb provides complete market-entry solutions.",
+      punchline: "We become your team on the ground.",
+      investorButton: "Become an Investor",
+      supplierButton: "Become a Supplier",
+      supplierTitle: "Solutions for international suppliers",
+      supplierCopy: "Horeb supports sourcing, local processes, representation, logistics, and delivery into industrial sites.",
+    },
+    process: {
+      eyebrow: "Our process",
+      title: "A clear method from first conversation to growth.",
+      items: ["Discovery", "Consultation", "Planning", "Execution", "Operations", "Growth"],
+    },
+    gallery: {
+      eyebrow: "Gallery",
+      title: "A strong and credible visual presence.",
+      copy: "The website is ready for more real photography: sites, equipment, warehouses, meetings, and field operations.",
+      items: [
+        { src: "img/mining-site.png", badge: "Mine sites", alt: "Mine site in Katanga" },
+        { src: "img/logistics-fleet.png", badge: "Logistics", alt: "Horeb logistics fleet" },
+        { src: "img/chemical-lab.png", badge: "Industrial products", alt: "Industrial quality control" },
+        { src: "img/women-executives.png", badge: "Team", alt: "Horeb team" },
+        { src: "img/team-collaboration-clean.jpg", badge: "Partnerships", alt: "Partnership meeting" },
+        { src: "img/horeb-flyer.png", badge: "Company profile", alt: "Horeb House of Excellence flyer" },
+      ],
+    },
+    news: {
+      eyebrow: "News & insights",
+      title: "A space ready for corporate updates.",
+      items: [
+        "Mining supply chain trends",
+        "Grand Katanga investment opportunities",
+        "Operational notes for international suppliers",
+      ],
+    },
+    testimonials: {
+      eyebrow: "Testimonials",
+      title: "Trust is built through execution.",
+      quote: "As an international partner, Horeb's local expertise made our market entry seamless.",
+      note: "Real client testimonials can be added as they become available.",
+    },
+    contact: {
+      eyebrow: "Contact",
+      title: "Let's build your success in the DRC.",
+      copy: "Talk to our Lubumbashi team for an investor, supplier, or operational consultation.",
+      button: "Book a Meeting",
+      location: "Lubumbashi",
+      phone: "+243 852 224 185",
+      email: "Joelle-horebhe@outlook.com",
+    },
+  },
+  zh: {
+    hero: {
+      eyebrow: "刚果（金）充满机会",
+      title: "刚果民主共和国向机会开放",
+      subtitle: "您在非洲矿业生态中的可信商业伙伴。",
+      lines: ["连接全球投资者。", "赋能国际供应商。", "交付卓越。"],
+      primary: "成为合作伙伴",
+      secondary: "联系团队",
+      chips: ["供应链", "市场进入", "运营管理"],
+    },
+    opportunity: {
+      eyebrow: "为什么投资刚果（金）？",
+      title: "能源转型核心地带的战略市场。",
+      copy: "大加丹加汇集资源、工业基础和迫切的运营需求。Horeb 帮助严肃的合作伙伴将机会转化为可控执行。",
+      imageBadge: "加丹加 • 刚果（金）",
+      imageCaption: "关键资源、矿业基础设施，以及对可靠合作伙伴不断增长的需求。",
+      items: [
+        { icon: "globe", title: "世界级铜与钴资源", text: "支撑电动汽车、工业技术和可再生能源的关键矿产。" },
+        { icon: "pin", title: "战略矿业枢纽", text: "大加丹加是中非增长最快的工业区域之一。" },
+        { icon: "stack", title: "不断增长的机会", text: "可靠分包商、物流商、工业供应商和现场伙伴需求强劲。" },
+      ],
+    },
+    meet: {
+      eyebrow: "认识 Horeb",
+      title: "我们不只是服务提供商",
+      partner: "我们是您的战略商业伙伴。",
+      businessPartner: "我们是您的商业伙伴",
+      copy: [
+        "Horeb 位于卢本巴希，将国际投资者和供应商连接到刚果民主共和国的机会。",
+        "我们经验丰富的团队提供交钥匙运营管理、供应链解决方案和矿业支持服务，使合作伙伴能够在非洲最具潜力的矿业市场之一自信运营。",
+      ],
+      button: "了解更多",
+    },
+    services: {
+      eyebrow: "我们的服务",
+      title: "端到端供应链，稳健管理。",
+      copy: "Horeb 并非定位为矿业公司；我们是让市场进入、供应和执行成为可能的运营伙伴。",
+      groups: [
+        { icon: "stack", title: "供应链", items: ["颗粒硫磺", "硫酸", "工业采购", "矿业化学品"] },
+        { icon: "drill", title: "矿业支持", items: ["钻探", "土方工程", "设备租赁", "运输", "物流", "现场服务"] },
+        { icon: "compass", title: "投资者解决方案", items: ["市场进入", "运营管理", "项目监督", "本地代表", "合规", "风险管理"] },
+      ],
+    },
+    why: {
+      eyebrow: "为什么选择 Horeb？",
+      title: "保护您运营的本地伙伴。",
+      items: [
+        { icon: "pin", title: "本地专业能力", text: "深刻理解刚果矿业生态系统。" },
+        { icon: "shield", title: "透明度", text: "清晰报告、责任机制和运营可追溯性。" },
+        { icon: "spark", title: "运营卓越", text: "将国际标准适配现场现实。" },
+        { icon: "users", title: "可信关系", text: "覆盖工业与矿业相关方的强大网络。" },
+        { icon: "truck", title: "经验团队", text: "可快速到场执行的专业人员。" },
+        { icon: "compass", title: "交钥匙方案", text: "我们管理运营，让您专注增长。" },
+      ],
+    },
+    industries: {
+      eyebrow: "支持行业",
+      title: "现场可靠性决定成败的行业。",
+      items: ["铜矿", "钴矿", "工业供应", "矿业承包商", "物流", "基础设施", "建筑", "能源"],
+    },
+    investment: {
+      eyebrow: "投资机会",
+      title: "希望在刚果（金）投资或扩展？",
+      copy: "无论您是寻找运营伙伴的投资者，还是进入中非市场的供应商，Horeb 都提供完整的市场进入解决方案。",
+      punchline: "我们成为您在当地的团队。",
+      investorButton: "成为投资者",
+      supplierButton: "成为供应商",
+      supplierTitle: "国际供应商解决方案",
+      supplierCopy: "Horeb 支持采购、本地流程、代表服务、物流以及向工业现场交付。",
+    },
+    process: {
+      eyebrow: "我们的流程",
+      title: "从首次沟通到增长的清晰方法。",
+      items: ["发现", "咨询", "规划", "执行", "运营", "增长"],
+    },
+    gallery: {
+      eyebrow: "图库",
+      title: "强大且可信的视觉呈现。",
+      copy: "网站已准备好加入更多真实照片：现场、设备、仓库、会议和实地运营。",
+      items: [
+        { src: "img/mining-site.png", badge: "矿区现场", alt: "加丹加矿区现场" },
+        { src: "img/logistics-fleet.png", badge: "物流", alt: "Horeb 物流车队" },
+        { src: "img/chemical-lab.png", badge: "工业产品", alt: "工业质量控制" },
+        { src: "img/women-executives.png", badge: "团队", alt: "Horeb 团队" },
+        { src: "img/team-collaboration-clean.jpg", badge: "合作", alt: "合作会议" },
+        { src: "img/horeb-flyer.png", badge: "公司资料", alt: "Horeb 公司宣传图" },
+      ],
+    },
+    news: {
+      eyebrow: "新闻与洞察",
+      title: "为企业更新预留的内容空间。",
+      items: ["矿业供应链趋势", "大加丹加投资机会", "国际供应商运营说明"],
+    },
+    testimonials: {
+      eyebrow: "客户评价",
+      title: "信任来自执行。",
+      quote: "作为国际合作伙伴，Horeb 的本地专业能力让我们的市场进入非常顺畅。",
+      note: "真实客户评价可在获得后添加。",
+    },
+    contact: {
+      eyebrow: "联系",
+      title: "让我们共同建设您在刚果（金）的成功。",
+      copy: "联系卢本巴希团队，获取投资者、供应商或运营咨询。",
+      button: "预约会议",
+      location: "卢本巴希",
+      phone: "+243 852 224 185",
+      email: "Joelle-horebhe@outlook.com",
+    },
+  },
+  sw: {
+    hero: {
+      eyebrow: "DRC iko wazi kwa fursa",
+      title: "Jamhuri ya Kidemokrasia ya Kongo iko wazi kwa fursa",
+      subtitle: "Mshirika wako wa biashara anayeaminika katika sekta ya migodi Afrika.",
+      lines: ["Kuunganisha wawekezaji wa kimataifa.", "Kuwawezesha wasambazaji wa kimataifa.", "Kutoa ubora."],
+      primary: "Kuwa Mshirika",
+      secondary: "Zungumza na Timu Yetu",
+      chips: ["Mnyororo wa ugavi", "Kuingia sokoni", "Usimamizi wa uendeshaji"],
+    },
+    opportunity: {
+      eyebrow: "Kwa nini kuwekeza DRC?",
+      title: "Soko la kimkakati katikati ya mageuzi ya nishati.",
+      copy: "Grand Katanga inaunganisha rasilimali, viwanda na mahitaji makubwa ya uendeshaji. Horeb husaidia washirika makini kubadilisha fursa kuwa utekelezaji uliodhibitiwa.",
+      imageBadge: "Katanga • DRC",
+      imageCaption: "Rasilimali muhimu, miundombinu ya migodi na mahitaji yanayokua ya washirika wa kuaminika.",
+      items: [
+        { icon: "globe", title: "Akiba ya shaba na kobalti ya kiwango cha dunia", text: "Madini muhimu yanayochochea magari ya umeme, teknolojia za viwanda na nishati jadidifu." },
+        { icon: "pin", title: "Kitovu cha kimkakati cha migodi", text: "Grand Katanga ni moja ya maeneo ya viwanda yanayokua kwa kasi Afrika ya Kati." },
+        { icon: "stack", title: "Fursa zinazokua", text: "Mahitaji makubwa ya wakandarasi, wasafirishaji, wasambazaji wa viwanda na washirika wa uwanjani wanaoaminika." },
+      ],
+    },
+    meet: {
+      eyebrow: "Ijue Horeb",
+      title: "Sisi ni Zaidi ya Mtoa Huduma",
+      partner: "Sisi ni mshirika wako wa kimkakati wa biashara.",
+      businessPartner: "SISI NI MSHIRIKA WAKO WA BIASHARA",
+      copy: [
+        "Ikiwa Lubumbashi, Horeb inaunganisha wawekezaji na wasambazaji wa kimataifa na fursa katika Jamhuri ya Kidemokrasia ya Kongo.",
+        "Timu yetu yenye uzoefu hutoa usimamizi wa uendeshaji wa turnkey, suluhisho za mnyororo wa ugavi na huduma za msaada wa migodi zinazowawezesha washirika wetu kufanya kazi kwa kujiamini katika moja ya masoko ya migodi yenye matumaini makubwa Afrika.",
+      ],
+      button: "Soma Zaidi",
+    },
+    services: {
+      eyebrow: "Huduma zetu",
+      title: "Mnyororo wa ugavi wa mwisho hadi mwisho, ukisimamiwa kwa uhakika.",
+      copy: "Horeb haijiweki kama kampuni ya uchimbaji; sisi ni mshirika wa uendeshaji anayefanikisha kuingia sokoni, usambazaji na utekelezaji.",
+      groups: [
+        { icon: "stack", title: "Mnyororo wa Ugavi", items: ["Sulfuri ya punje", "Asidi ya sulfuriki", "Ununuzi wa viwanda", "Kemikali za migodi"] },
+        { icon: "drill", title: "Msaada wa Migodi", items: ["Uchimbaji", "Kazi za ardhi", "Kukodisha vifaa", "Usafiri", "Logistics", "Huduma za eneo"] },
+        { icon: "compass", title: "Suluhisho za Wawekezaji", items: ["Kuingia sokoni", "Usimamizi wa uendeshaji", "Uangalizi wa mradi", "Uwakilishi wa ndani", "Uzingatiaji sheria", "Usimamizi wa hatari"] },
+      ],
+    },
+    why: {
+      eyebrow: "Kwa nini Horeb?",
+      title: "Mshirika wa ndani anayelinda shughuli zako.",
+      items: [
+        { icon: "pin", title: "Utaalamu wa ndani", text: "Uelewa wa kina wa mfumo wa migodi wa Kongo." },
+        { icon: "shield", title: "Uwazi", text: "Ripoti wazi, uwajibikaji na ufuatiliaji wa shughuli." },
+        { icon: "spark", title: "Ubora wa uendeshaji", text: "Viwango vya kimataifa vilivyolinganishwa na hali halisi ya uwanjani." },
+        { icon: "users", title: "Mahusiano ya kuaminika", text: "Mtandao imara katika wadau wa viwanda na migodi." },
+        { icon: "truck", title: "Wafanyakazi wenye uzoefu", text: "Timu za kitaalamu tayari kufanya kazi uwanjani." },
+        { icon: "compass", title: "Suluhisho za turnkey", text: "Tunasimamia uendeshaji ili wewe uzingatie ukuaji." },
+      ],
+    },
+    industries: {
+      eyebrow: "Sekta tunazosaidia",
+      title: "Sekta ambapo uaminifu uwanjani huleta tofauti.",
+      items: ["Migodi ya shaba", "Migodi ya kobalti", "Ugavi wa viwanda", "Wakandarasi wa migodi", "Logistics", "Miundombinu", "Ujenzi", "Nishati"],
+    },
+    investment: {
+      eyebrow: "Fursa za uwekezaji",
+      title: "Unataka kuwekeza au kupanua DRC?",
+      copy: "Iwe wewe ni mwekezaji unayetafuta washirika wa uendeshaji au msambazaji anayepanuka Afrika ya Kati, Horeb hutoa suluhisho kamili za kuingia sokoni.",
+      punchline: "Tunakuwa timu yako uwanjani.",
+      investorButton: "Kuwa Mwekezaji",
+      supplierButton: "Kuwa Msambazaji",
+      supplierTitle: "Suluhisho kwa wasambazaji wa kimataifa",
+      supplierCopy: "Horeb husaidia sourcing, michakato ya ndani, uwakilishi, logistics na uwasilishaji kwenye maeneo ya viwanda.",
+    },
+    process: {
+      eyebrow: "Mchakato wetu",
+      title: "Mbinu wazi kutoka mazungumzo ya kwanza hadi ukuaji.",
+      items: ["Ugunduzi", "Ushauri", "Mipango", "Utekelezaji", "Uendeshaji", "Ukuaji"],
+    },
+    gallery: {
+      eyebrow: "Matunzio",
+      title: "Muonekano thabiti na wa kuaminika.",
+      copy: "Tovuti iko tayari kwa picha halisi zaidi: maeneo, vifaa, maghala, mikutano na shughuli za uwanjani.",
+      items: [
+        { src: "img/mining-site.png", badge: "Maeneo ya migodi", alt: "Eneo la mgodi Katanga" },
+        { src: "img/logistics-fleet.png", badge: "Logistics", alt: "Magari ya logistics ya Horeb" },
+        { src: "img/chemical-lab.png", badge: "Bidhaa za viwanda", alt: "Udhibiti wa ubora wa viwanda" },
+        { src: "img/women-executives.png", badge: "Timu", alt: "Timu ya Horeb" },
+        { src: "img/team-collaboration-clean.jpg", badge: "Ushirikiano", alt: "Mkutano wa ushirikiano" },
+        { src: "img/horeb-flyer.png", badge: "Wasifu wa kampuni", alt: "Flyer ya Horeb House of Excellence" },
+      ],
+    },
+    news: {
+      eyebrow: "Habari na maarifa",
+      title: "Eneo tayari kwa masasisho ya kampuni.",
+      items: ["Mwelekeo wa mnyororo wa ugavi wa migodi", "Fursa za uwekezaji Grand Katanga", "Maelezo ya uendeshaji kwa wasambazaji wa kimataifa"],
+    },
+    testimonials: {
+      eyebrow: "Ushuhuda",
+      title: "Uaminifu hujengwa kupitia utekelezaji.",
+      quote: "Kama mshirika wa kimataifa, utaalamu wa ndani wa Horeb ulifanya kuingia kwetu sokoni kuwa rahisi.",
+      note: "Ushuhuda halisi wa wateja unaweza kuongezwa pindi unapopatikana.",
+    },
+    contact: {
+      eyebrow: "Mawasiliano",
+      title: "Tujenge mafanikio yako DRC.",
+      copy: "Zungumza na timu yetu ya Lubumbashi kwa mashauriano ya mwekezaji, msambazaji au uendeshaji.",
+      button: "Panga Mkutano",
+      location: "Lubumbashi",
+      phone: "+243 852 224 185",
+      email: "Joelle-horebhe@outlook.com",
+    },
+  },
+};
+
 function escapeHtml(value) {
   return String(value || "")
     .replace(/&/g, "&amp;")
@@ -1331,6 +1862,11 @@ function pageFile(page) {
 
 function pageHref(page, lang) {
   return `${pageFile(page)}?lang=${encodeURIComponent(lang)}`;
+}
+
+function navHref(item, lang) {
+  const href = pageHref(item.page, lang);
+  return item.hash ? `${href}#${encodeURIComponent(item.hash)}` : href;
 }
 
 function currentPage() {
@@ -1362,12 +1898,12 @@ function setMeta(name, contentValue) {
 }
 
 function renderHeader(lang, page, data) {
-  const navLinks = pageOrder
+  const navLinks = navItems
     .map((target) => {
-      const active = target === page ? "is-active" : "";
-      const current = target === page ? ' aria-current="page"' : "";
-      return `<a class="nav__link ${active}" href="${pageHref(target, lang)}"${current}>${escapeHtml(
-        data.nav[target]
+      const active = target.page === page && !target.hash ? "is-active" : "";
+      const current = target.page === page && !target.hash ? ' aria-current="page"' : "";
+      return `<a class="nav__link ${active}" href="${navHref(target, lang)}"${current}>${escapeHtml(
+        data.nav[target.key]
       )}</a>`;
     })
     .join("");
@@ -1382,13 +1918,12 @@ function renderHeader(lang, page, data) {
     )
     .join("");
 
-  const mobileLinks = pageOrder
+  const mobileLinks = navItems
     .map((target) => {
-      const current = target === page ? ' aria-current="page"' : "";
-      return `<a class="nav__link ${target === page ? "is-active" : ""}" href="${pageHref(
-        target,
-        lang
-      )}"${current}>${escapeHtml(data.nav[target])}</a>`;
+      const current = target.page === page && !target.hash ? ' aria-current="page"' : "";
+      return `<a class="nav__link ${
+        target.page === page && !target.hash ? "is-active" : ""
+      }" href="${navHref(target, lang)}"${current}>${escapeHtml(data.nav[target.key])}</a>`;
     })
     .join("");
 
@@ -1399,7 +1934,7 @@ function renderHeader(lang, page, data) {
     <header class="site-header">
       <div class="shell header-shell">
         <a class="brand" href="${homeHref}" title="Horeb House of Excellence" aria-label="Horeb House of Excellence">
-          <img class="brand__mark" src="img/logosansbackgroung.png" alt="Horeb House of Excellence" />
+          <img class="brand__mark" src="img/logo-mark.png" alt="Horeb House of Excellence" />
         </a>
 
         <nav class="desktop-nav" aria-label="Navigation Principale">
@@ -1431,10 +1966,10 @@ function renderHeader(lang, page, data) {
 }
 
 function renderFooter(lang, data) {
-  const links = pageOrder
+  const links = footerItems
     .map(
       (target) =>
-        `<a href="${pageHref(target, lang)}">${escapeHtml(data.nav[target])}</a>`
+        `<a href="${navHref(target, lang)}">${escapeHtml(data.nav[target.key])}</a>`
     )
     .join("");
 
@@ -1444,7 +1979,7 @@ function renderFooter(lang, data) {
         <div class="footer__top">
           <div>
             <a class="brand" href="${pageHref("home", lang)}">
-              <img class="brand__mark" src="img/logosansbackgroung.png" alt="Horeb" />
+              <img class="brand__mark" src="img/logo-mark.png" alt="Horeb" />
               <span class="brand__copy">
                 <strong class="brand__name">Horeb</strong>
                 <span class="brand__tag">${escapeHtml(data.site.brandTag)}</span>
@@ -1624,151 +2159,284 @@ function renderHero({ eyebrow, title, subtitle, ctaText, ctaHref, poster = "img/
 }
 
 function renderHome(lang, data) {
-  const pillarCards = data.pillars.items
-    .map((item, index) => cardHtml({ ...item, lang }, index * 80))
+  const content = homeExperience[lang] || homeExperience.fr;
+
+  const opportunityCards = content.opportunity.items
+    .map((item, index) => cardHtml(item, index * 70))
     .join("");
 
-  const statCards = data.hero.stats
-    .map((stat, index) => statHtml(stat, index * 70))
+  const serviceGroups = content.services.groups
+    .map(
+      (group, index) => `
+        <article class="service-suite card reveal" style="--delay:${index * 80}ms">
+          <div class="card__icon">${icon(group.icon)}</div>
+          <h3 class="card__title">${escapeHtml(group.title)}</h3>
+          <ul class="service-suite__list">
+            ${group.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          </ul>
+        </article>
+      `
+    )
     .join("");
 
-  const heroHtml = renderHero({
-    eyebrow: data.hero.eyebrow,
-    title: data.hero.title,
-    subtitle: data.hero.subtitle,
-    ctaText: data.hero.primary,
-    ctaHref: pageHref("services", lang),
-    poster: "img/mining-site.png",
-  });
+  const whyCards = content.why.items
+    .map((item, index) => cardHtml(item, index * 55, true))
+    .join("");
 
-  const manifestoTexts = {
-    fr: {
-      quote: "« Nous croyons que l’excellence industrielle commence par la rigueur et le respect inconditionnel de la parole donnée. »",
-      author: "HOREB — THE HOUSE OF EXCELLENCE • LUBUMBASHI, RDC"
-    },
-    en: {
-      quote: "“We believe industrial excellence begins with unyielding precision and absolute commitment to our word.”",
-      author: "HOREB — THE HOUSE OF EXCELLENCE • LUBUMBASHI, DRC"
-    },
-    zh: {
-      quote: "“我们坚信，工业的卓越始于严谨，以及对承诺的绝对遵守。”",
-      author: "HOREB — 卓越之屋 • 刚果（金）卢本巴希"
-    },
-    sw: {
-      quote: "“Tunaamini kuwa ubora wa viwanda unaanza na umakini na kuheshimu ahadi zetu kikamilifu.”",
-      author: "HOREB — NYUMBA YA UBORA • LUBUMBASHI, RDC"
-    }
-  };
+  const industryCards = content.industries.items
+    .map(
+      (item, index) => `
+        <article class="industry-card reveal" style="--delay:${index * 45}ms">
+          <span>${escapeHtml(item)}</span>
+        </article>
+      `
+    )
+    .join("");
 
-  const currentManifesto = manifestoTexts[lang] || manifestoTexts.fr;
+  const processSteps = content.process.items
+    .map(
+      (item, index) => `
+        <article class="process-step reveal" style="--delay:${index * 60}ms">
+          <span class="process-step__num">${String(index + 1).padStart(2, "0")}</span>
+          <h3>${escapeHtml(item)}</h3>
+        </article>
+      `
+    )
+    .join("");
+
+  const galleryItems = content.gallery.items
+    .map(
+      (item, index) => `
+        <figure class="gallery-card reveal" style="--delay:${index * 55}ms">
+          <img src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy" />
+          <figcaption>${escapeHtml(item.badge)}</figcaption>
+        </figure>
+      `
+    )
+    .join("");
+
+  const newsItems = content.news.items
+    .map(
+      (item, index) => `
+        <article class="news-card card reveal" style="--delay:${index * 70}ms">
+          <span class="card__badge">Insight</span>
+          <h3 class="card__title">${escapeHtml(item)}</h3>
+          <p class="card__copy">${escapeHtml(content.news.title)}</p>
+        </article>
+      `
+    )
+    .join("");
 
   return `
-    ${heroHtml}
+    <section class="hero hero--home" id="home">
+      <div class="hero__media" aria-hidden="true">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="img/mining-site.png">
+          <source src="video/Videobackgroup.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__overlay"></div>
+        <div class="home-map-animation">
+          <span class="home-map-animation__line"></span>
+          <span class="home-map-animation__point home-map-animation__point--drc"></span>
+          <span class="home-map-animation__point home-map-animation__point--lubumbashi"></span>
+        </div>
+        <span class="hero__orb hero__orb--a"></span>
+        <span class="hero__orb hero__orb--b"></span>
+        <span class="hero__orb hero__orb--c"></span>
+      </div>
+      <div class="shell hero__content">
+        <div class="hero__copy page-hero__copy--center reveal" style="--delay:80ms">
+          <p class="eyebrow">${escapeHtml(content.hero.eyebrow)}</p>
+          <h1 class="hero__title">${escapeHtml(content.hero.title)}</h1>
+          <p class="hero__subtitle">${escapeHtml(content.hero.subtitle)}</p>
+          <div class="home-hero__lines">
+            ${content.hero.lines.map((line) => `<span>${escapeHtml(line)}</span>`).join("")}
+          </div>
+          <div class="hero__actions hero__actions--center">
+            <a class="btn btn--solid" href="#investment-opportunities">${escapeHtml(content.hero.primary)} ${icons.arrow}</a>
+            <a class="btn btn--ghost" href="${pageHref("contact", lang)}">${escapeHtml(content.hero.secondary)}</a>
+          </div>
+          <div class="hero__chips hero__chips--center">
+            ${content.hero.chips.map((chip) => chipHtml(chip)).join("")}
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div class="page-body home-body">
-      <!-- Section Chiffres Clés & Repères -->
-      <section class="section section--tight">
+      <section class="section section--tight" id="why-drc">
         <div class="shell">
-          <div class="grid grid--4 stats-grid">${statCards}</div>
+          <div class="split split--2">
+            <div>
+              ${sectionHead(
+                content.opportunity.eyebrow,
+                content.opportunity.title,
+                content.opportunity.copy,
+                false,
+                40
+              )}
+              <div class="grid grid--3 opportunity-grid">${opportunityCards}</div>
+            </div>
+            ${imageCard({
+              src: "img/mining-site.png",
+              alt: content.opportunity.imageBadge,
+              badge: content.opportunity.imageBadge,
+              caption: content.opportunity.imageCaption,
+              ratio: "portrait",
+            })}
+          </div>
         </div>
       </section>
 
-      <!-- Section Piliers d'Excellence -->
-      <section class="section">
+      <section class="section" id="about-gateway">
+        <div class="shell">
+          <div class="split split--2 meet-horeb">
+            ${imageCard({
+              src: "img/team-collaboration-clean.jpg",
+              alt: content.meet.eyebrow,
+              badge: content.meet.businessPartner,
+              caption: content.meet.partner,
+              ratio: "landscape",
+            })}
+            <div class="meet-horeb__copy reveal" style="--delay:80ms">
+              <p class="eyebrow">${escapeHtml(content.meet.eyebrow)}</p>
+              <h2 class="section-title">${escapeHtml(content.meet.title)}</h2>
+              <p class="meet-horeb__partner">${escapeHtml(content.meet.partner)}</p>
+              ${content.meet.copy.map((paragraph) => `<p class="section-copy">${escapeHtml(paragraph)}</p>`).join("")}
+              <div class="business-partner-ribbon">${escapeHtml(content.meet.businessPartner)}</div>
+              <a class="btn btn--solid" href="${pageHref("about", lang)}">${escapeHtml(content.meet.button)} ${icons.arrow}</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services-overview">
         <div class="shell">
           ${sectionHead(
-            data.pillars.eyebrow,
-            data.pillars.title,
-            data.pillars.copy,
+            content.services.eyebrow,
+            content.services.title,
+            content.services.copy,
             true,
             40
           )}
-          <div class="grid grid--2">${pillarCards}</div>
+          <div class="grid grid--3 service-suite-grid">${serviceGroups}</div>
         </div>
       </section>
 
-      <!-- Section Récit & Ancrage Katanga -->
-      <section class="section">
-        <div class="shell">
-          <div class="split split--2">
-            <div class="stack">
-              ${quoteCard({
-                label: data.story.eyebrow,
-                copyText: data.story.title,
-                meta: data.story.copy.join(" "),
-              })}
-              <div class="card reveal" style="--delay:80ms">
-                <div class="card__icon">${icons.compass}</div>
-                <h3 class="card__title">${escapeHtml(data.story.imageBadge)}</h3>
-                <p class="card__copy">${escapeHtml(data.story.imageCaption)}</p>
-              </div>
-            </div>
-            <div class="stack">
-              ${imageCard({
-                src: "img/women-executives.png",
-                alt: "Direction Horeb House of Excellence",
-                badge: data.story.imageBadge,
-                caption: "Une équipe dirigeante féminine engagée pour le développement industriel.",
-                ratio: "portrait",
-              })}
-              ${imageCard({
-                src: "img/mining-site.png",
-                alt: "Concession minière Katanga Horeb",
-                badge: "Ancrage Katanga",
-                caption: "Une présence forte au cœur des opérations du Haut-Katanga.",
-                ratio: "landscape",
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section Manifeste Sombre Immersif -->
-      <section class="section section--tight">
-        <div class="shell">
-          <div class="manifesto-section reveal">
-            <blockquote class="manifesto-quote">${currentManifesto.quote}</blockquote>
-            <div class="manifesto-author">${currentManifesto.author}</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Processus & Méthodologie -->
-      <section class="section">
+      <section class="section section--dark" id="why-horeb">
         <div class="shell">
           ${sectionHead(
-            "Méthodologie Opérationnelle",
-            "Un cadre d'exécution en 4 étapes clés.",
-            "De la qualification du besoin jusqu'à la livraison sur site minier.",
-            false,
+            content.why.eyebrow,
+            content.why.title,
+            "",
+            true,
             40
           )}
-          <div class="timeline-grid">
-            <div class="timeline-step reveal" style="--delay:60ms">
-              <span class="timeline-num">01</span>
-              <h3 class="timeline-title">Diagnostic & Alignement</h3>
-              <p class="timeline-desc">Analyse approfondie des spécifications techniques et évaluation des contraintes terrain.</p>
+          <div class="grid grid--3 why-grid">${whyCards}</div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="shell">
+          ${sectionHead(
+            content.industries.eyebrow,
+            content.industries.title,
+            "",
+            true,
+            40
+          )}
+          <div class="industry-grid">${industryCards}</div>
+        </div>
+      </section>
+
+      <section class="section section--tight" id="investment-opportunities">
+        <div class="shell">
+          <div class="investment-panel reveal">
+            <div>
+              <p class="eyebrow">${escapeHtml(content.investment.eyebrow)}</p>
+              <h2 class="section-title">${escapeHtml(content.investment.title)}</h2>
+              <p class="section-copy">${escapeHtml(content.investment.copy)}</p>
+              <p class="investment-panel__punchline">${escapeHtml(content.investment.punchline)}</p>
+              <div class="hero__actions">
+                <a class="btn btn--solid" href="${pageHref("contact", lang)}">${escapeHtml(content.investment.investorButton)} ${icons.arrow}</a>
+                <a class="btn btn--ghost" href="#supplier-solutions">${escapeHtml(content.investment.supplierButton)}</a>
+              </div>
             </div>
-            <div class="timeline-step reveal" style="--delay:120ms">
-              <span class="timeline-num">02</span>
-              <h3 class="timeline-title">Sourçage & Conformité</h3>
-              <p class="timeline-desc">Sélection rigoureuse des réactifs et matériaux répondant aux normes internationales.</p>
-            </div>
-            <div class="timeline-step reveal" style="--delay:180ms">
-              <span class="timeline-num">03</span>
-              <h3 class="timeline-title">Déploiement Logistique</h3>
-              <p class="timeline-desc">Acheminement sécurisé, gestion douanière et coordination de la flotte jusqu'au site.</p>
-            </div>
-            <div class="timeline-step reveal" style="--delay:240ms">
-              <span class="timeline-num">04</span>
-              <h3 class="timeline-title">Suivi & Restitution</h3>
-              <p class="timeline-desc">Traçabilité complète, rapports d'audit et support opérationnel continu.</p>
+            <div class="supplier-panel" id="supplier-solutions">
+              <span class="card__badge">${escapeHtml((copy[lang] || copy.fr).nav.suppliers)}</span>
+              <h3>${escapeHtml(content.investment.supplierTitle)}</h3>
+              <p>${escapeHtml(content.investment.supplierCopy)}</p>
             </div>
           </div>
         </div>
       </section>
 
-      ${ctaBand(data.cta, lang)}
+      <section class="section" id="process">
+        <div class="shell">
+          ${sectionHead(
+            content.process.eyebrow,
+            content.process.title,
+            "",
+            true,
+            40
+          )}
+          <div class="process-flow">${processSteps}</div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery">
+        <div class="shell">
+          ${sectionHead(
+            content.gallery.eyebrow,
+            content.gallery.title,
+            content.gallery.copy,
+            true,
+            40
+          )}
+          <div class="gallery-grid">${galleryItems}</div>
+        </div>
+      </section>
+
+      <section class="section section--tight" id="news">
+        <div class="shell">
+          ${sectionHead(
+            content.news.eyebrow,
+            content.news.title,
+            "",
+            true,
+            40
+          )}
+          <div class="grid grid--3">${newsItems}</div>
+        </div>
+      </section>
+
+      <section class="section section--tight" id="testimonials">
+        <div class="shell">
+          <div class="testimonial-card reveal">
+            <p class="eyebrow">${escapeHtml(content.testimonials.eyebrow)}</p>
+            <h2 class="section-title">${escapeHtml(content.testimonials.title)}</h2>
+            <blockquote>“${escapeHtml(content.testimonials.quote)}”</blockquote>
+            <p>${escapeHtml(content.testimonials.note)}</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" id="home-contact">
+        <div class="shell">
+          <div class="contact-panel reveal">
+            <div>
+              <p class="eyebrow">${escapeHtml(content.contact.eyebrow)}</p>
+              <h2 class="section-title">${escapeHtml(content.contact.title)}</h2>
+              <p class="section-copy">${escapeHtml(content.contact.copy)}</p>
+              <a class="btn btn--solid" href="${pageHref("contact", lang)}">${escapeHtml(content.contact.button)} ${icons.arrow}</a>
+            </div>
+            <div class="contact-panel__details">
+              <span>📍 ${escapeHtml(content.contact.location)}</span>
+              <a href="tel:+243852224185">☎ ${escapeHtml(content.contact.phone)}</a>
+              <a href="mailto:Joelle-horebhe@outlook.com">✉ ${escapeHtml(content.contact.email)}</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   `;
 }
@@ -1940,7 +2608,7 @@ function renderValues(lang, data) {
             })}
             <div class="stack">
               ${imageCard({
-                src: "img/logosansbackgroung.png",
+                src: "img/logo-mark.png",
                 alt: "Logo Horeb House of Excellence",
                 badge: data.hero.imageBadge,
                 caption: data.hero.imageCaption,
