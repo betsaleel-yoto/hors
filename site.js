@@ -1394,7 +1394,7 @@ const homeExperience = {
     services: {
       eyebrow: "Nos services",
       title: "Une chaîne d’approvisionnement pilotée de bout en bout.",
-      copy: "Horeb n'est pas positionnée comme une entreprise minière : nous sommes une solution concrète à un enjeu réel pour les investisseurs et les partenaires internationaux qui souhaitent accéder au marché congolais sans nécessairement y être physiquement implantés. Grâce à notre présence à Lubumbashi, à notre connaissance du terrain et à notre expérience du secteur minier, nous vous offrons un relais opérationnel en RDC et nous vous permettons de saisir les opportunités offertes par ce marché, quelle que soit la distance qui vous sépare du Congo.",
+      copy: "Nous sommes une solution concrète à un enjeux réel pour les investisseurs et les partenaires internationaux qui souhaitent accéder au marché congolais sans nécessairement y être physiquement établi. Grâce à notre présence à Lubumbashi, notre connaissance du terrain et notre expérience du secteur minier, nous vous offrons un relais opérationnel en RDC, nous vous permettons de saisir les opportunités offertes par ce marché, quelque soit la distance qui vous sépare du Congo.",
       groups: [
         {
           icon: "stack",
