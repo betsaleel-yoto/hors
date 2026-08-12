@@ -612,6 +612,11 @@ body.page-home .menu-panel__links .nav__link {
   background: currentColor;
 }
 
+.text-gold {
+  color: var(--gold);
+  font-weight: 800;
+}
+
 .hero__title,
 .page-title,
 .section-title {

@@ -175,8 +175,8 @@ const copy = {
         ],
         quote: {
           label: "Notre Philosophie",
-          copy: "La véritable excellence se mesure à la régularité et à la fiabilité de l'exécution.",
-          meta: "Nous instaurons un climat de confiance réciproque en simplifiant la complexité opérationnelle.",
+          copy: "Chez Horeb, nous croyons que la distance ne devrait jamais être un obstacle à l'opportunité. Notre philosophie est de rendre le marché congolais accessible aux investisseurs, fournisseurs et entreprises internationales en leur offrant une présence locale fiable, une expertise opérationnelle et une gestion transparente. Nous ne nous contentons pas de vous ouvrir les portes du Congo : nous vous accompagnons une fois la porte franchie. De la compréhension du marché à l'exécution et au suivi des opérations, nous mettons notre connaissance du terrain, notre réseau et notre savoir-faire au service de la réussite de nos partenaires. Parce que pour nous, être votre partenaire signifie porter votre vision sur le terrain et la transformer en résultats.",
+          meta: "Une présence locale fiable, une expertise opérationnelle et une gestion transparente.",
         },
         cta: {
           eyebrow: "Engagés sur le terrain",
@@ -498,8 +498,8 @@ const copy = {
         ],
         quote: {
           label: "Our Philosophy",
-          copy: "True excellence is measured by consistency and absolute reliability in execution.",
-          meta: "We build trust by simplifying operational complexity.",
+          copy: "At Horeb, we believe distance should never stand in the way of opportunity. Our philosophy is to make the Congolese market accessible to investors, suppliers, and international companies by providing a reliable local presence, operational expertise, and transparent management. We do more than open the door to Congo: we support you once you step through it. From market understanding to execution and follow-up, we put our field knowledge, network, and know-how at the service of our partners' success. For us, being your partner means carrying your vision on the ground and turning it into results.",
+          meta: "Reliable local presence, operational expertise, and transparent management.",
         },
         cta: {
           eyebrow: "Field execution",
@@ -821,8 +821,8 @@ const copy = {
         ],
         quote: {
           label: "我们的理念",
-          copy: "真正的卓越体现在执行的一贯性与绝对可靠性上。",
-          meta: "我们通过简化复杂的运营细节来建立深厚信任。",
+          copy: "在 Horeb，我们相信距离不应成为机会的障碍。我们的理念是，通过提供可靠的本地存在、运营专业能力和透明的管理，让刚果市场对投资者、供应商和国际企业变得真正可达。我们不只是为您打开刚果的大门，而是在您跨过门槛之后继续陪伴您。从市场认知到执行和运营跟进，我们把对实地的了解、我们的网络和专业能力投入到合作伙伴的成功中。对我们来说，成为您的合作伙伴，就是把您的愿景带到现场，并把它转化为成果。",
+          meta: "可靠的本地存在、专业的运营能力和透明的管理。",
         },
         cta: {
           eyebrow: "现场执行",
@@ -1144,8 +1144,8 @@ const copy = {
         ],
         quote: {
           label: "Falsafa Yetu",
-          copy: "Ubora wa kweli hupimwa kwa uthabiti na uaminifu kamili katika utekelezaji.",
-          meta: "Tunajenga uaminifu kwa kurahisisha ugumu wa uendeshaji.",
+          copy: "Horeb tunaamini kwamba umbali haupaswi kamwe kuwa kikwazo kwa fursa. Falsafa yetu ni kuifanya soko la Kongo lipatikane kwa wawekezaji, wasambazaji na kampuni za kimataifa kwa kuwapatia uwepo wa ndani unaotegemeka, utaalamu wa kiutendaji na usimamizi wa uwazi. Hatufungui tu milango ya Kongo: tunakuandamana hata baada ya kuvuka kizingiti hicho. Kuanzia kuelewa soko hadi utekelezaji na ufuatiliaji wa shughuli, tunaweka maarifa yetu ya uwanjani, mtandao wetu na ujuzi wetu katika huduma ya mafanikio ya washirika wetu. Kwa sababu kwetu, kuwa mshirika wako maana yake ni kubeba maono yako uwanjani na kuyageuza kuwa matokeo.",
+          meta: "Uwepo wa ndani unaotegemeka, utaalamu wa kiutendaji na usimamizi wa uwazi.",
         },
         cta: {
           eyebrow: "Utekelezaji wa uwanjani",
@@ -1343,17 +1343,18 @@ const copy = {
 const homeExperience = {
   fr: {
     hero: {
-      eyebrow: "La RDC est ouverte aux opportunités",
-      title: "La République démocratique du Congo est ouverte aux opportunités",
-      subtitle: "Votre partenaire d’affaires de confiance dans l’industrie minière africaine.",
+      eyebrow: "Marché minier congolais",
+      title: "Nous connectons les investisseurs et fournisseurs internationaux aux opportunités du marché minier congolais.",
+      subtitle: "Horeb, votre partenaire de confiance dans l'industrie minière congolaise.",
       lines: [
-        "Connecter les investisseurs mondiaux.",
-        "Renforcer les fournisseurs internationaux.",
-        "Livrer l’excellence.",
+        "Vous rêvez d'investir en RDC ?",
+        "Vous êtes un investisseur mondial à la recherche d'opportunités à forte croissance ?",
+        "Vous êtes un fournisseur international souhaitant entrer ou vous développer sur le marché congolais ?",
+        "Alors vous êtes au bon endroit.",
       ],
       primary: "Devenir partenaire",
       secondary: "Parler à notre équipe",
-      chips: ["Supply chain", "Accès marché", "Gestion opérationnelle"],
+      chips: ["Investisseurs", "Fournisseurs", "Lubumbashi"],
     },
     opportunity: {
       eyebrow: "Pourquoi la RDC ?",
@@ -1382,18 +1383,18 @@ const homeExperience = {
     meet: {
       eyebrow: "Rencontrer Horeb",
       title: "Nous sommes plus qu’un prestataire de services",
-      partner: "Nous sommes votre partenaire stratégique.",
+      partner: "Horeb, votre partenaire de confiance dans l'industrie minière congolaise.",
       businessPartner: "NOUS SOMMES VOTRE PARTENAIRE D’AFFAIRES",
       copy: [
-        "Basée à Lubumbashi, Horeb connecte les investisseurs internationaux et les fournisseurs aux opportunités de la République démocratique du Congo.",
-        "Notre équipe expérimentée fournit la gestion opérationnelle clé en main, des solutions de chaîne d’approvisionnement et des services de support minier permettant à nos partenaires d’opérer avec confiance dans l’un des marchés miniers les plus prometteurs d’Afrique.",
+        "Basée à Lubumbashi, Horeb offre un relais opérationnel concret aux investisseurs et partenaires internationaux qui souhaitent accéder au marché congolais sans nécessairement être physiquement implantés.",
+        "Grâce à notre présence à Lubumbashi, à notre connaissance du terrain et à notre expérience du secteur minier, nous vous aidons à saisir les opportunités offertes par ce marché, quelle que soit la distance qui vous sépare du Congo.",
       ],
       button: "En savoir plus",
     },
     services: {
       eyebrow: "Nos services",
       title: "Une chaîne d’approvisionnement pilotée de bout en bout.",
-      copy: "Horeb n’est pas positionnée comme une entreprise minière : nous sommes le partenaire opérationnel qui rend l’accès au marché, la fourniture et l’exécution possibles.",
+      copy: "Horeb n'est pas positionnée comme une entreprise minière : nous sommes une solution concrète à un enjeu réel pour les investisseurs et les partenaires internationaux qui souhaitent accéder au marché congolais sans nécessairement y être physiquement implantés. Grâce à notre présence à Lubumbashi, à notre connaissance du terrain et à notre expérience du secteur minier, nous vous offrons un relais opérationnel en RDC et nous vous permettons de saisir les opportunités offertes par ce marché, quelle que soit la distance qui vous sépare du Congo.",
       groups: [
         {
           icon: "stack",
@@ -1484,17 +1485,18 @@ const homeExperience = {
   },
   en: {
     hero: {
-      eyebrow: "The DRC is open for opportunity",
-      title: "The Democratic Republic of Congo is open for opportunity",
-      subtitle: "Your trusted business partner in Africa's mining industry.",
+      eyebrow: "Congolese mining market",
+      title: "We connect international investors and suppliers to opportunities in the Congolese mining market.",
+      subtitle: "Horeb, your trusted partner in Congolese mining.",
       lines: [
-        "Connecting global investors.",
-        "Empowering international suppliers.",
-        "Delivering excellence.",
+        "Have you ever dreamed of investing in Congo?",
+        "Are you a global investor looking for high-growth opportunities?",
+        "Are you an international supplier seeking to enter or expand in the Congolese market?",
+        "Then you are in the right place.",
       ],
       primary: "Become a Partner",
       secondary: "Talk to Our Team",
-      chips: ["Supply chain", "Market entry", "Operational management"],
+      chips: ["Investors", "Suppliers", "Lubumbashi"],
     },
     opportunity: {
       eyebrow: "Why invest in the DRC?",
@@ -1523,18 +1525,18 @@ const homeExperience = {
     meet: {
       eyebrow: "Meet Horeb",
       title: "We Are More Than a Service Provider",
-      partner: "We are your strategic business partner.",
+      partner: "Horeb, your trusted partner in Congolese mining.",
       businessPartner: "WE ARE YOUR BUSINESS PARTNER",
       copy: [
-        "Based in Lubumbashi, Horeb connects international investors and suppliers with opportunities in the Democratic Republic of Congo.",
-        "Our experienced team delivers turnkey operational management, supply chain solutions, and mining support services that allow our partners to operate confidently in one of Africa's most promising mining markets.",
+        "Based in Lubumbashi, Horeb provides a concrete operational relay for international investors and partners who want to access the Congolese market without necessarily being physically established there.",
+        "Thanks to our presence in Lubumbashi, our knowledge of the field, and our experience in the mining sector, we help you seize the opportunities offered by this market, no matter the distance that separates you from Congo.",
       ],
       button: "Learn More",
     },
     services: {
       eyebrow: "Our services",
       title: "End-to-end supply chain, managed with confidence.",
-      copy: "Horeb is not positioned as a mining company: we are the operational partner that makes market entry, supply, and execution possible.",
+      copy: "Horeb is not positioned as a mining company: we are a concrete solution to a real challenge for investors and international partners who want to access the Congolese market without necessarily being physically established there. Thanks to our presence in Lubumbashi, our knowledge of the terrain, and our experience in the mining sector, we provide you with an operational relay in the DRC and allow you to seize the opportunities offered by this market, no matter the distance that separates you from Congo.",
       groups: [
         {
           icon: "stack",
@@ -1625,13 +1627,13 @@ const homeExperience = {
   },
   zh: {
     hero: {
-      eyebrow: "刚果（金）充满机会",
-      title: "刚果民主共和国向机会开放",
-      subtitle: "您在非洲矿业生态中的可信商业伙伴。",
-      lines: ["连接全球投资者。", "赋能国际供应商。", "交付卓越。"],
+      eyebrow: "刚果矿业市场",
+      title: "我们将国际投资者和供应商连接到刚果矿业市场的机会。",
+      subtitle: "Horeb，您在刚果矿业领域值得信赖的合作伙伴。",
+      lines: ["您是否梦想在刚果投资？", "您是否是正在寻找高增长机会的全球投资者？", "您是否是希望进入或拓展刚果市场的国际供应商？", "那么，您来对地方了。"],
       primary: "成为合作伙伴",
       secondary: "联系团队",
-      chips: ["供应链", "市场进入", "运营管理"],
+      chips: ["投资者", "供应商", "卢本巴希"],
     },
     opportunity: {
       eyebrow: "为什么投资刚果（金）？",
@@ -1648,18 +1650,18 @@ const homeExperience = {
     meet: {
       eyebrow: "认识 Horeb",
       title: "我们不只是服务提供商",
-      partner: "我们是您的战略商业伙伴。",
+      partner: "Horeb，您在刚果矿业领域值得信赖的合作伙伴。",
       businessPartner: "我们是您的商业伙伴",
       copy: [
-        "Horeb 位于卢本巴希，将国际投资者和供应商连接到刚果民主共和国的机会。",
-        "我们经验丰富的团队提供交钥匙运营管理、供应链解决方案和矿业支持服务，使合作伙伴能够在非洲最具潜力的矿业市场之一自信运营。",
+        "Horeb 总部位于卢本巴希，为希望进入刚果市场但不一定需要在当地设立实体的国际投资者和合作伙伴提供切实的运营支持。",
+        "凭借我们在卢本巴希的本地存在、对实地情况的了解以及在矿业领域的经验，我们帮助您把握这一市场带来的机遇，无论您与刚果相距多远。",
       ],
       button: "了解更多",
     },
     services: {
       eyebrow: "我们的服务",
       title: "端到端供应链，稳健管理。",
-      copy: "Horeb 并非定位为矿业公司；我们是让市场进入、供应和执行成为可能的运营伙伴。",
+      copy: "Horeb 并非定位为矿业公司：我们为希望进入刚果市场但不一定需要在当地落地的投资者和国际合作伙伴提供切实可行的解决方案。凭借我们在卢本巴希的本地存在、对实地情况的了解以及在矿业领域的经验，我们在刚果民主共和国为您提供运营支持，并帮助您把握这一市场带来的机遇，无论您与刚果相距多远。",
       groups: [
         { icon: "stack", title: "供应链", items: ["颗粒硫磺", "硫酸", "工业采购", "矿业化学品"] },
         { icon: "drill", title: "矿业支持", items: ["钻探", "土方工程", "设备租赁", "运输", "物流", "现场服务"] },
@@ -1734,13 +1736,13 @@ const homeExperience = {
   },
   sw: {
     hero: {
-      eyebrow: "DRC iko wazi kwa fursa",
-      title: "Jamhuri ya Kidemokrasia ya Kongo iko wazi kwa fursa",
-      subtitle: "Mshirika wako wa biashara anayeaminika katika sekta ya migodi Afrika.",
-      lines: ["Kuunganisha wawekezaji wa kimataifa.", "Kuwawezesha wasambazaji wa kimataifa.", "Kutoa ubora."],
+      eyebrow: "Soko la madini la Kongo",
+      title: "Tunawaunganisha wawekezaji na wasambazaji wa kimataifa na fursa katika soko la madini la Kongo.",
+      subtitle: "Horeb, mshirika wako wa kuaminika katika sekta ya madini ya Kongo.",
+      lines: ["Je, umewahi kuota kuwekeza Kongo?", "Je, wewe ni mwekezaji wa kimataifa unayetafuta fursa zenye ukuaji mkubwa?", "Je, wewe ni msambazaji wa kimataifa anayetaka kuingia au kupanua katika soko la Kongo?", "Basi uko mahali sahihi."],
       primary: "Kuwa Mshirika",
       secondary: "Zungumza na Timu Yetu",
-      chips: ["Mnyororo wa ugavi", "Kuingia sokoni", "Usimamizi wa uendeshaji"],
+      chips: ["Wawekezaji", "Wasambazaji", "Lubumbashi"],
     },
     opportunity: {
       eyebrow: "Kwa nini kuwekeza DRC?",
@@ -1757,18 +1759,18 @@ const homeExperience = {
     meet: {
       eyebrow: "Ijue Horeb",
       title: "Sisi ni Zaidi ya Mtoa Huduma",
-      partner: "Sisi ni mshirika wako wa kimkakati wa biashara.",
+      partner: "Horeb, mshirika wako wa kuaminika katika sekta ya madini ya Kongo.",
       businessPartner: "SISI NI MSHIRIKA WAKO WA BIASHARA",
       copy: [
-        "Ikiwa Lubumbashi, Horeb inaunganisha wawekezaji na wasambazaji wa kimataifa na fursa katika Jamhuri ya Kidemokrasia ya Kongo.",
-        "Timu yetu yenye uzoefu hutoa usimamizi wa uendeshaji wa turnkey, suluhisho za mnyororo wa ugavi na huduma za msaada wa migodi zinazowawezesha washirika wetu kufanya kazi kwa kujiamini katika moja ya masoko ya migodi yenye matumaini makubwa Afrika.",
+        "Kikiwa mjini Lubumbashi, Horeb hutoa daraja la kiutendaji kwa wawekezaji na washirika wa kimataifa wanaotaka kufikia soko la Kongo bila lazima kuwepo kimwili nchini humo.",
+        "Kupitia uwepo wetu mjini Lubumbashi, uelewa wetu wa uwanjani na uzoefu wetu katika sekta ya madini, tunakusaidia kuchangamkia fursa zinazotolewa na soko hili, bila kujali umbali unaokutenganisha na Kongo.",
       ],
       button: "Soma Zaidi",
     },
     services: {
       eyebrow: "Huduma zetu",
       title: "Mnyororo wa ugavi wa mwisho hadi mwisho, ukisimamiwa kwa uhakika.",
-      copy: "Horeb haijiweki kama kampuni ya uchimbaji; sisi ni mshirika wa uendeshaji anayefanikisha kuingia sokoni, usambazaji na utekelezaji.",
+      copy: "Horeb haijiweki kama kampuni ya madini: sisi ni suluhisho la vitendo kwa changamoto halisi inayowakabili wawekezaji na washirika wa kimataifa wanaotaka kufikia soko la Kongo bila lazima kuwa wamejikita kimwili humo. Kupitia uwepo wetu mjini Lubumbashi, uelewa wetu wa mazingira ya uwanjani na uzoefu wetu katika sekta ya madini, tunakupatia kiungo cha kiutendaji katika Jamhuri ya Kidemokrasia ya Kongo na kukuwezesha kuchukua fursa zinazotolewa na soko hili, bila kujali umbali unaokutenganisha na Kongo.",
       groups: [
         { icon: "stack", title: "Mnyororo wa Ugavi", items: ["Sulfuri ya punje", "Asidi ya sulfuriki", "Ununuzi wa viwanda", "Kemikali za migodi"] },
         { icon: "drill", title: "Msaada wa Migodi", items: ["Uchimbaji", "Kazi za ardhi", "Kukodisha vifaa", "Usafiri", "Logistics", "Huduma za eneo"] },
@@ -1850,6 +1852,10 @@ function escapeHtml(value) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+function highlightHoreb(text) {
+  return escapeHtml(text).replace(/\bHoreb\b/gi, (match) => `<span class="text-gold">${match}</span>`);
 }
 
 function icon(name) {
@@ -2087,7 +2093,7 @@ function imageCard({ src, alt, badge, caption, ratio = "portrait", contain = fal
       <div class="media-card__overlay">
         <div>
           <div class="media-card__badge">${escapeHtml(badge)}</div>
-          ${caption ? `<p class="media-card__caption">${escapeHtml(caption)}</p>` : ""}
+          ${caption ? `<p class="media-card__caption">${highlightHoreb(caption)}</p>` : ""}
         </div>
       </div>
     </div>
@@ -2144,8 +2150,8 @@ function renderHero({ eyebrow, title, subtitle, ctaText, ctaHref, poster = "img/
         <div class="shell hero__content">
           <div class="hero__copy page-hero__copy--center reveal" style="--delay:60ms">
             <p class="eyebrow">${escapeHtml(eyebrow)}</p>
-            <h1 class="hero__title">${escapeHtml(title)}</h1>
-            <p class="hero__subtitle">${escapeHtml(subtitle)}</p>
+            <h1 class="hero__title">${highlightHoreb(title)}</h1>
+            <p class="hero__subtitle">${highlightHoreb(subtitle)}</p>
             <div class="hero__actions hero__actions--center">
               <a class="btn btn--solid" href="${ctaHref}">
                 ${escapeHtml(ctaText)} ${icons.arrow}
@@ -2300,7 +2306,7 @@ function renderHome(lang, data) {
             <div class="meet-horeb__copy reveal" style="--delay:80ms">
               <p class="eyebrow">${escapeHtml(content.meet.eyebrow)}</p>
               <h2 class="section-title">${escapeHtml(content.meet.title)}</h2>
-              <p class="meet-horeb__partner">${escapeHtml(content.meet.partner)}</p>
+              <p class="meet-horeb__partner">${highlightHoreb(content.meet.partner)}</p>
               ${content.meet.copy.map((paragraph) => `<p class="section-copy">${escapeHtml(paragraph)}</p>`).join("")}
               <div class="business-partner-ribbon">${escapeHtml(content.meet.businessPartner)}</div>
               <a class="btn btn--solid" href="${pageHref("about", lang)}">${escapeHtml(content.meet.button)} ${icons.arrow}</a>
