@@ -1267,11 +1267,51 @@ body.page-home .menu-panel__links .nav__link {
 }
 
 .quote-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 0.85rem;
   padding: 1.4rem 1.45rem;
   border-radius: var(--radius-lg);
   background: linear-gradient(135deg, rgba(201, 150, 69, 0.14), rgba(235, 213, 207, 0.26));
   border: 1px solid rgba(201, 150, 69, 0.14);
   box-shadow: var(--shadow-md);
+}
+
+.quote-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.quote-card--philosophy {
+  padding: clamp(1.65rem, 3vw, 2.4rem);
+  background:
+    radial-gradient(circle at top right, rgba(240, 208, 146, 0.28), transparent 34%),
+    radial-gradient(circle at bottom left, rgba(201, 150, 69, 0.14), transparent 32%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(251, 246, 238, 0.88));
+  border-color: rgba(201, 150, 69, 0.2);
+}
+
+.quote-card--philosophy::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 34%),
+    linear-gradient(135deg, rgba(201, 150, 69, 0.06), transparent 55%);
+  pointer-events: none;
+}
+
+.quote-card--philosophy::after {
+  content: "";
+  position: absolute;
+  top: 1.35rem;
+  bottom: 1.35rem;
+  left: 0;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  box-shadow: 0 0 20px rgba(201, 150, 69, 0.22);
 }
 
 .quote-card__label {
@@ -1294,11 +1334,58 @@ body.page-home .menu-panel__links .nav__link {
   letter-spacing: -0.03em;
 }
 
+.quote-card__copy--rich {
+  display: grid;
+  gap: 1rem;
+}
+
+.quote-card--philosophy .quote-card__label {
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--gold-deep);
+  box-shadow: 0 10px 24px rgba(201, 150, 69, 0.1);
+}
+
+.quote-card--philosophy .quote-card__copy {
+  margin-top: 0.95rem;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-size: clamp(1.02rem, 1.4vw, 1.14rem);
+  line-height: 1.92;
+  letter-spacing: 0;
+  color: var(--text-soft);
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.quote-card--philosophy .quote-card__paragraph {
+  margin: 0;
+}
+
+.quote-card--philosophy .quote-card__paragraph + .quote-card__paragraph {
+  padding-top: 0.2rem;
+}
+
+.quote-card--philosophy strong {
+  color: var(--gold-deep);
+  font-weight: 800;
+}
+
 .quote-card__meta {
   margin: 0.8rem 0 0;
   color: var(--text-soft);
   font-size: 0.94rem;
   line-height: 1.65;
+}
+
+.quote-card--philosophy .quote-card__meta {
+  margin-top: 1.05rem;
+  padding-top: 0.95rem;
+  border-top: 1px solid rgba(201, 150, 69, 0.18);
+  color: var(--gold-deep);
+  font-style: italic;
+  text-align: justify;
+  text-align-last: left;
 }
 
 .cta-band {
@@ -1413,13 +1500,13 @@ body.page-home .footer__bottom {
 }
 
 .hero--home .hero__title {
-  max-width: 18ch;
-  font-size: clamp(3.2rem, 5.1vw, 6rem);
-  line-height: 0.92;
+  max-width: 30ch;
+  font-size: clamp(3rem, 4.8vw, 5.4rem);
+  line-height: 0.9;
   text-transform: uppercase;
   overflow-wrap: normal;
   word-break: normal;
-  hyphens: auto;
+  hyphens: none;
 }
 
 .home-hero__lines {

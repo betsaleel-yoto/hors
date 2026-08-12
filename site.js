@@ -1858,6 +1858,35 @@ function highlightHoreb(text) {
   return escapeHtml(text).replace(/\bHoreb\b/gi, (match) => `<span class="text-gold">${match}</span>`);
 }
 
+function philosophyQuoteHtml(lang) {
+  const paragraphsByLang = {
+    fr: [
+      "Chez Horeb, nous croyons que la <strong>distance</strong> ne devrait jamais être un <strong>obstacle</strong> à l'<strong>opportunité</strong>.",
+      "Notre philosophie est de rendre le <strong>marché congolais</strong> accessible aux investisseurs, fournisseurs et entreprises internationales en leur offrant une <strong>présence locale fiable</strong>, une <strong>expertise opérationnelle</strong> et une <strong>gestion transparente</strong>.",
+      "Nous ne nous contentons pas de vous ouvrir les portes du Congo : nous vous accompagnons une fois la porte franchie. De la compréhension du marché à l'<strong>exécution</strong> et au suivi des opérations, nous mettons notre connaissance du <strong>terrain</strong>, notre <strong>réseau</strong> et notre <strong>savoir-faire</strong> au service de la réussite de nos partenaires. Parce que pour nous, être votre <strong>partenaire</strong> signifie porter votre <strong>vision</strong> sur le terrain et la transformer en <strong>résultats</strong>.",
+    ],
+    en: [
+      "At Horeb, we believe <strong>distance</strong> should never stand in the way of <strong>opportunity</strong>.",
+      "Our philosophy is to make the <strong>Congolese market</strong> accessible to investors, suppliers, and international companies by providing a <strong>reliable local presence</strong>, <strong>operational expertise</strong>, and <strong>transparent management</strong>.",
+      "We do more than open the door to Congo: we support you once you step through it. From market understanding to <strong>execution</strong> and operational follow-up, we put our <strong>field knowledge</strong>, <strong>network</strong>, and <strong>know-how</strong> at the service of our partners' success. For us, being your <strong>partner</strong> means carrying your <strong>vision</strong> on the ground and turning it into <strong>results</strong>.",
+    ],
+    zh: [
+      "在 Horeb，我们相信<strong>距离</strong>不应成为<strong>机会</strong>的障碍。",
+      "我们的理念是，通过提供<strong>可靠的本地存在</strong>、<strong>运营专业能力</strong>和<strong>透明的管理</strong>，让<strong>刚果市场</strong>对投资者、供应商和国际企业变得真正可达。",
+      "我们不只是为您打开刚果的大门，而是在您跨过门槛之后继续陪伴您。从市场认知到<strong>执行</strong>和运营跟进，我们把对<strong>实地</strong>的了解、我们的<strong>网络</strong>和专业能力投入到合作伙伴的成功中。对我们来说，成为您的<strong>合作伙伴</strong>，就是把您的<strong>愿景</strong>带到现场，并把它转化为<strong>成果</strong>。",
+    ],
+    sw: [
+      "Horeb tunaamini kwamba <strong>umbali</strong> haupaswi kamwe kuwa <strong>kikwazo</strong> kwa <strong>fursa</strong>.",
+      "Falsafa yetu ni kuifanya <strong>soko la Kongo</strong> lipatikane kwa wawekezaji, wasambazaji na kampuni za kimataifa kwa kuwapatia <strong>uwepo wa ndani unaotegemeka</strong>, <strong>utaalamu wa kiutendaji</strong> na <strong>usimamizi wa uwazi</strong>.",
+      "Hatufungui tu milango ya Kongo: tunakuandamani hata baada ya kuvuka kizingiti hicho. Kuanzia kuelewa soko hadi <strong>utekelezaji</strong> na ufuatiliaji wa shughuli, tunaweka maarifa yetu ya <strong>uwanjani</strong>, <strong>mtandao</strong> wetu na <strong>ujuzi</strong> wetu katika huduma ya mafanikio ya washirika wetu. Kwa sababu kwetu, kuwa <strong>mshirika</strong> wako maana yake ni kubeba <strong>maono</strong> yako uwanjani na kuyageuza kuwa <strong>matokeo</strong>.",
+    ],
+  };
+
+  const paragraphs = paragraphsByLang[lang] || paragraphsByLang.fr;
+
+  return paragraphs.map((paragraph) => `<p class="quote-card__paragraph">${paragraph}</p>`).join("");
+}
+
 function icon(name) {
   return icons[name] || icons.spark;
 }
@@ -2100,11 +2129,15 @@ function imageCard({ src, alt, badge, caption, ratio = "portrait", contain = fal
   `;
 }
 
-function quoteCard({ label, copyText, meta }) {
+function quoteCard({ label, copyText, copyHtml = "", meta, variant = "" }) {
   return `
-    <aside class="quote-card reveal">
+    <aside class="quote-card ${variant ? `quote-card--${variant}` : ""} reveal">
       <span class="quote-card__label">${escapeHtml(label)}</span>
-      <blockquote class="quote-card__copy">${escapeHtml(copyText)}</blockquote>
+      ${
+        copyHtml
+          ? `<div class="quote-card__copy quote-card__copy--rich">${copyHtml}</div>`
+          : `<blockquote class="quote-card__copy">${escapeHtml(copyText)}</blockquote>`
+      }
       <p class="quote-card__meta">${escapeHtml(meta)}</p>
     </aside>
   `;
@@ -2476,7 +2509,9 @@ function renderAbout(lang, data) {
             ${quoteCard({
               label: data.quote.label,
               copyText: data.quote.copy,
+              copyHtml: philosophyQuoteHtml(lang),
               meta: data.quote.meta,
+              variant: "philosophy",
             })}
             <div class="stack">
               ${imageCard({
