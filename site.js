@@ -1514,7 +1514,6 @@ const homeExperience = {
       eyebrow: "Témoignages",
       title: "La confiance se construit par l’exécution.",
       quote: "En tant que partenaire international, l’expertise locale de Horeb a rendu notre entrée marché fluide.",
-      note: "Des témoignages clients réels pourront être ajoutés dès qu’ils seront disponibles.",
     },
     contact: {
       eyebrow: "Contact",
@@ -1656,7 +1655,6 @@ const homeExperience = {
       eyebrow: "Testimonials",
       title: "Trust is built through execution.",
       quote: "As an international partner, Horeb's local expertise made our market entry seamless.",
-      note: "Real client testimonials can be added as they become available.",
     },
     contact: {
       eyebrow: "Contact",
@@ -1765,7 +1763,6 @@ const homeExperience = {
       eyebrow: "客户评价",
       title: "信任来自执行。",
       quote: "作为国际合作伙伴，Horeb 的本地专业能力让我们的市场进入非常顺畅。",
-      note: "真实客户评价可在获得后添加。",
     },
     contact: {
       eyebrow: "联系",
@@ -1874,7 +1871,6 @@ const homeExperience = {
       eyebrow: "Ushuhuda",
       title: "Uaminifu hujengwa kupitia utekelezaji.",
       quote: "Kama mshirika wa kimataifa, utaalamu wa ndani wa Horeb ulifanya kuingia kwetu sokoni kuwa rahisi.",
-      note: "Ushuhuda halisi wa wateja unaweza kuongezwa pindi unapopatikana.",
     },
     contact: {
       eyebrow: "Mawasiliano",
@@ -2515,7 +2511,6 @@ function renderHome(lang, data) {
             <p class="eyebrow">${escapeHtml(content.testimonials.eyebrow)}</p>
             <h2 class="section-title">${escapeHtml(content.testimonials.title)}</h2>
             <blockquote>“${escapeHtml(content.testimonials.quote)}”</blockquote>
-            <p>${escapeHtml(content.testimonials.note)}</p>
           </div>
         </div>
       </section>
