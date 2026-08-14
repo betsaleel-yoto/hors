@@ -28,6 +28,45 @@ const navItems = [
 
 const footerItems = navItems.filter((item) => item.key !== "projects" && item.key !== "news");
 
+const WHATSAPP_NUMBER = "243852224185";
+const WHATSAPP_CHAT_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
+const WHATSAPP_LANGUAGE_NAMES = {
+  fr: "Français",
+  en: "English",
+  zh: "中文",
+  sw: "Kiswahili",
+};
+const WHATSAPP_MESSAGE_LABELS = {
+  fr: {
+    header: "Nouvelle demande via le formulaire Horeb",
+    language: "Langue du site",
+    name: "Nom / Entreprise",
+    email: "Adresse e-mail",
+    message: "Message",
+  },
+  en: {
+    header: "New enquiry via the Horeb form",
+    language: "Site language",
+    name: "Name / Company",
+    email: "Email address",
+    message: "Message",
+  },
+  zh: {
+    header: "来自 Horeb 表单的新咨询",
+    language: "网站语言",
+    name: "姓名 / 公司",
+    email: "电子邮箱",
+    message: "消息",
+  },
+  sw: {
+    header: "Ombi jipya kupitia fomu ya Horeb",
+    language: "Lugha ya tovuti",
+    name: "Jina / Kampuni",
+    email: "Barua pepe",
+    message: "Ujumbe",
+  },
+};
+
 const icons = {
   spark: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.1 6.1L20 10l-5.9 1.9L12 18l-2.1-6.1L4 10l5.9-1.9L12 2z"/><path d="M4 18l1.4.5L6 20l.6-1.5L8 18l-1.4-.5L6 16l-.6 1.5L4 18z"/></svg>`,
   stack: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 4 8l8 4 8-4-8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 16l8 4 8-4"/></svg>`,
@@ -321,7 +360,7 @@ const copy = {
       },
       contact: {
         metaTitle: "Horeb | Contact & Implantation",
-        metaDescription: "Contactez Horeb à Lubumbashi, RDC. Téléphones (+243 852 224 185, +27 723 472 246), email et formulaire direct.",
+        metaDescription: "Contactez Horeb à Lubumbashi, RDC. Téléphones, WhatsApp et formulaire direct.",
         hero: {
           eyebrow: "Prendre Contact",
           title: "Échangeons autour de vos projets.",
@@ -363,8 +402,9 @@ const copy = {
         cta: {
           eyebrow: "Écrivez-nous",
           title: "Envoyez-nous votre message",
-          copy: "Remplissez le formulaire ci-dessous et notre direction prendra contact avec vous rapidement.",
-          button: "Envoyer l'Email",
+          copy: "Remplissez le formulaire ci-dessous et votre message s'ouvrira dans WhatsApp pour notre direction.",
+          button: "Envoyer sur WhatsApp",
+          success: "WhatsApp s'est ouvert avec votre message prérempli pour +243 852 224 185.",
         },
       },
     },
@@ -644,7 +684,7 @@ const copy = {
       },
       contact: {
         metaTitle: "Horeb | Contact Us",
-        metaDescription: "Contact Horeb in Lubumbashi, DRC. Phones and email.",
+        metaDescription: "Contact Horeb in Lubumbashi, DRC. Phones, WhatsApp, and a direct form.",
         hero: {
           eyebrow: "Get in Touch",
           title: "Let's connect on your project goals.",
@@ -686,8 +726,9 @@ const copy = {
         cta: {
           eyebrow: "Write to us",
           title: "Send Us a Message",
-          copy: "Complete the form below and our executive team will contact you shortly.",
-          button: "Send Email",
+          copy: "Complete the form below and your message will open in WhatsApp for our executive team.",
+          button: "Send on WhatsApp",
+          success: "WhatsApp opened with your prefilled message for +243 852 224 185.",
         },
       },
     },
@@ -967,7 +1008,7 @@ const copy = {
       },
       contact: {
         metaTitle: "Horeb | 联系我们",
-        metaDescription: "联系刚果（金）卢本巴希的 Horeb。电话与邮箱。",
+        metaDescription: "联系刚果（金）卢本巴希的 Horeb。电话、WhatsApp 与联系表单。",
         hero: {
           eyebrow: "联系方式",
           title: "讨论您的项目需求。",
@@ -1009,8 +1050,9 @@ const copy = {
         cta: {
           eyebrow: "给我们写信",
           title: "发送您的信息",
-          copy: "填写下方表单，我们的管理团队将很快与您取得联系。",
-          button: "发送邮件",
+          copy: "填写下方表单，您的消息将会在 WhatsApp 中打开给我们的管理团队。",
+          button: "发送到 WhatsApp",
+          success: "WhatsApp 已打开，您的消息已预先填写给 +243 852 224 185。",
         },
       },
     },
@@ -1290,7 +1332,7 @@ const copy = {
       },
       contact: {
         metaTitle: "Horeb | Wasiliana Nasi",
-        metaDescription: "Wasiliana na Horeb huko Lubumbashi, DRC. Simu na barua pepe.",
+        metaDescription: "Wasiliana na Horeb huko Lubumbashi, DRC. Simu, WhatsApp na fomu ya moja kwa moja.",
         hero: {
           eyebrow: "Wasiliana Nasi",
           title: "Tuongee kuhusu miradi yako.",
@@ -1332,8 +1374,9 @@ const copy = {
         cta: {
           eyebrow: "Tuandikie",
           title: "Tuma Ujumbe Wako",
-          copy: "Jaza fomu hapa chini na timu yetu ya watendaji itawasiliana nawe hivi karibuni.",
-          button: "Tuma Barua Pepe",
+          copy: "Jaza fomu hapa chini na ujumbe wako utafunguliwa kwenye WhatsApp kwa timu yetu ya uongozi.",
+          button: "Tuma kupitia WhatsApp",
+          success: "WhatsApp imefunguka na ujumbe wako umejazwa kwa +243 852 224 185.",
         },
       },
     },
@@ -1908,6 +1951,24 @@ function currentPage() {
   return document.body.dataset.page || "home";
 }
 
+function buildWhatsAppMessage(lang, values) {
+  const labels = WHATSAPP_MESSAGE_LABELS[lang] || WHATSAPP_MESSAGE_LABELS.fr;
+  const languageName = WHATSAPP_LANGUAGE_NAMES[lang] || WHATSAPP_LANGUAGE_NAMES.fr;
+
+  return [
+    labels.header,
+    `${labels.language}: ${languageName}`,
+    `${labels.name}: ${values.name}`,
+    `${labels.email}: ${values.email}`,
+    `${labels.message}:`,
+    values.message,
+  ].join("\n");
+}
+
+function buildWhatsAppUrl(lang, values) {
+  return `${WHATSAPP_CHAT_URL}?text=${encodeURIComponent(buildWhatsAppMessage(lang, values))}`;
+}
+
 function readLang() {
   const params = new URLSearchParams(window.location.search);
   const requested = params.get("lang");
@@ -2143,7 +2204,7 @@ function quoteCard({ label, copyText, copyHtml = "", meta, variant = "" }) {
   `;
 }
 
-function ctaBand({ eyebrow, title, copyText, button }, lang) {
+function ctaBand({ eyebrow, title, copyText, button, href }, lang) {
   return `
     <section class="section section--tight">
       <div class="shell">
@@ -2152,7 +2213,7 @@ function ctaBand({ eyebrow, title, copyText, button }, lang) {
             <p class="eyebrow">${escapeHtml(eyebrow)}</p>
             <h2 class="section-title">${escapeHtml(title)}</h2>
             <p class="section-copy">${escapeHtml(copyText)}</p>
-            <a class="btn btn--solid" href="${pageHref("contact", lang)}">
+            <a class="btn btn--solid" href="${escapeHtml(href || pageHref("contact", lang))}">
               ${escapeHtml(button)}
               ${icons.arrow}
             </a>
@@ -2675,6 +2736,7 @@ function renderValues(lang, data) {
 
 function renderContact(lang, data) {
   const cards = data.cards.map((item, index) => cardHtml(item, index * 60, false)).join("");
+  const whatsappUrl = WHATSAPP_CHAT_URL;
 
   const heroHtml = renderHero({
     eyebrow: data.hero.eyebrow,
@@ -2726,7 +2788,7 @@ function renderContact(lang, data) {
                     ${icons.arrow}
                   </button>
                   <div id="formSuccess" class="form-success" hidden>
-                    Merci pour votre message. Notre direction vous répondra dans les plus brefs délais.
+                    ${escapeHtml(data.cta.success)}
                   </div>
                 </form>
               </div>
@@ -2743,7 +2805,7 @@ function renderContact(lang, data) {
         </div>
       </section>
 
-      ${ctaBand(data.cta, lang)}
+      ${ctaBand({ ...data.cta, href: whatsappUrl }, lang)}
     </div>
   `;
 }
@@ -2795,7 +2857,7 @@ function renderApp() {
     setupVideoBackgrounds();
     setupNumberCounters();
     setupModals();
-    setupContactForm();
+    setupContactForm(lang);
   });
 }
 
@@ -2990,15 +3052,35 @@ function setupModals() {
   });
 }
 
-function setupContactForm() {
+function setupContactForm(lang) {
   const form = document.getElementById("contactForm");
   const successMsg = document.getElementById("formSuccess");
   if (!form || !successMsg) return;
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    const nameInput = document.getElementById("nameInput");
+    const emailInput = document.getElementById("emailInput");
+    const messageInput = document.getElementById("messageInput");
+    if (!nameInput || !emailInput || !messageInput) return;
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+    const whatsappUrl = buildWhatsAppUrl(lang, { name, email, message });
     const btn = form.querySelector("button[type='submit']");
     if (btn) btn.disabled = true;
+    const openedWindow = window.open(whatsappUrl, "_blank");
+    if (!openedWindow) {
+      window.location.href = whatsappUrl;
+      return;
+    }
+
+    try {
+      openedWindow.opener = null;
+    } catch (error) {
+      // Ignore browsers that block direct opener mutation.
+    }
     successMsg.hidden = false;
     form.reset();
     setTimeout(() => {
