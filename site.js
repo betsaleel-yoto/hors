@@ -92,7 +92,7 @@ const copy = {
       menu: "Menu",
       language: "Langue",
       footerNote: "Disponible en français, anglais, chinois et swahili.",
-      footerTag: "Partenaire stratégique en chaîne d’approvisionnement, opérations et accès marché • Lubumbashi, RDC.",
+      footerTag: "Partenaire stratégique en chaîne d’approvisionnement, opérations et accès au marché • Lubumbashi, RDC.",
     },
     nav: {
       home: "Accueil",
@@ -141,7 +141,7 @@ const copy = {
             {
               icon: "stack",
               title: "Services & Expertises",
-              text: "Approvisionnement, logistique, soufre & produits chimiques, forage, terrassement et support clé en main.",
+              text: "Approvisionnement, logistique, soufre, acide sulfurique et autres produits chimiques, forage, terrassement et support clé en main.",
               hrefPage: "services",
               linkText: "Voir tous nos services",
             },
@@ -181,7 +181,7 @@ const copy = {
       },
       about: {
         metaTitle: "Horeb | À propos de nous",
-        metaDescription: "Découvrez Horeb, partenaire stratégique en chaîne d’approvisionnement, accès marché et gestion opérationnelle basé à Lubumbashi.",
+        metaDescription: "Découvrez Horeb, partenaire stratégique en chaîne d’approvisionnement, accès au marché et gestion opérationnelle basé à Lubumbashi.",
         hero: {
           eyebrow: "Histoire & Leadership",
           title: "Ancrée à Lubumbashi. Reconnue au Katanga.",
@@ -199,7 +199,7 @@ const copy = {
           {
             icon: "stack",
             title: "Cœur de métier",
-            text: "Chaîne d’approvisionnement, logistique, accès marché, gestion opérationnelle et support industriel.",
+            text: "Chaîne d’approvisionnement, logistique, accès au marché, gestion opérationnelle et support industriel.",
           },
           {
             icon: "globe",
@@ -226,7 +226,7 @@ const copy = {
       },
       services: {
         metaTitle: "Horeb | Nos Services & Expertises",
-        metaDescription: "Chaîne d’approvisionnement, logistique, soufre, produits chimiques, accès marché et support opérationnel clé en main en RDC.",
+        metaDescription: "Chaîne d’approvisionnement, logistique, soufre, acide sulfurique, autres produits chimiques, accès au marché et support opérationnel clé en main en RDC.",
         hero: {
           eyebrow: "Pôles d'Expertise",
           title: "Des solutions supply chain et opérationnelles sur-mesure.",
@@ -244,8 +244,8 @@ const copy = {
           },
           {
             icon: "leaf",
-            title: "Soufre & Produits Chimiques",
-            text: "Fourniture de soufre industriel, d'acide sulfurique et de réactifs pour la transformation minérale.",
+            title: "Soufre, Acide Sulfurique & Autres Produits Chimiques",
+            text: "Fourniture de soufre industriel, d'acide sulfurique et d'autres produits chimiques pour la transformation minérale.",
             detail: "Respect strict des normes de sécurité pour le transport et le stockage de substances chimiques sensibles utilisées dans le traitement du cuivre et du cobalt.",
           },
           {
@@ -1388,7 +1388,7 @@ const homeExperience = {
     hero: {
       eyebrow: "Marché minier congolais",
       title: "Nous connectons les investisseurs et fournisseurs internationaux aux opportunités du marché minier congolais.",
-      subtitle: "Horeb, votre partenaire de confiance dans l'industrie minière congolaise.",
+      subtitle: "Horeb, votre partenaire de confiance dans l'industrie minière.",
       lines: [
         "Vous rêvez d'investir en RDC ?",
         "Vous êtes un investisseur mondial à la recherche d'opportunités à forte croissance ?",
@@ -1426,7 +1426,7 @@ const homeExperience = {
     meet: {
       eyebrow: "Rencontrer Horeb",
       title: "Nous sommes plus qu’un prestataire de services",
-      partner: "Horeb, votre partenaire de confiance dans l'industrie minière congolaise.",
+      partner: "Horeb, votre partenaire de confiance dans l'industrie minière.",
       businessPartner: "NOUS SOMMES VOTRE PARTENAIRE D’AFFAIRES",
       copy: [
         "Basée à Lubumbashi, Horeb offre un relais opérationnel concret aux investisseurs et partenaires internationaux qui souhaitent accéder au marché congolais sans nécessairement être physiquement implantés.",
@@ -1437,7 +1437,7 @@ const homeExperience = {
     services: {
       eyebrow: "Nos services",
       title: "Une chaîne d’approvisionnement pilotée de bout en bout.",
-      copy: "Nous sommes une solution concrète à un enjeux réel pour les investisseurs et les partenaires internationaux qui souhaitent accéder au marché congolais sans nécessairement y être physiquement établi. Grâce à notre présence à Lubumbashi, notre connaissance du terrain et notre expérience du secteur minier, nous vous offrons un relais opérationnel en RDC, nous vous permettons de saisir les opportunités offertes par ce marché, quelque soit la distance qui vous sépare du Congo.",
+      copy: "Nous sommes une solution concrète à un enjeu réel pour les investisseurs et les partenaires internationaux qui souhaitent accéder au marché congolais sans nécessairement y être physiquement établis. Grâce à notre présence à Lubumbashi, notre connaissance du terrain et notre expérience du secteur minier, nous vous offrons un relais opérationnel en RDC, nous vous permettons de saisir les opportunités offertes par ce marché, quelle que soit la distance qui vous sépare du Congo.",
       groups: [
         {
           icon: "stack",
@@ -1452,7 +1452,7 @@ const homeExperience = {
         {
           icon: "compass",
           title: "Solutions investisseurs",
-          items: ["Entrée marché", "Gestion opérationnelle", "Supervision de projet", "Représentation locale", "Conformité", "Gestion des risques"],
+          items: ["Entrée sur le marché", "Gestion opérationnelle", "Supervision de projet", "Représentation locale", "Conformité", "Gestion des risques"],
         },
       ],
     },
@@ -1476,11 +1476,11 @@ const homeExperience = {
     investment: {
       eyebrow: "Opportunités d’investissement",
       title: "Vous souhaitez investir ou vous implanter en RDC ?",
-      copy: "Que vous soyez un investisseur à la recherche d’un partenaire opérationnel ou un fournisseur qui s’étend en Afrique centrale, Horeb fournit des solutions complètes d’entrée marché.",
+      copy: "Que vous soyez un investisseur à la recherche d’un partenaire opérationnel ou un fournisseur qui s’étend en Afrique centrale, Horeb fournit des solutions complètes d’entrée sur le marché.",
       punchline: "Nous devenons votre équipe sur le terrain.",
       investorButton: "Devenir investisseur",
       supplierButton: "Devenir fournisseur",
-      supplierTitle: "Solutions pour fournisseurs internationaux",
+      supplierTitle: "Solutions pour les fournisseurs internationaux",
       supplierCopy: "Horeb facilite votre sourcing, vos démarches locales, votre représentation, votre logistique et vos livraisons vers les sites industriels.",
     },
     process: {
@@ -1513,7 +1513,7 @@ const homeExperience = {
     testimonials: {
       eyebrow: "Témoignages",
       title: "La confiance se construit par l’exécution.",
-      quote: "En tant que partenaire international, l’expertise locale de Horeb a rendu notre entrée marché fluide.",
+      quote: "En tant que partenaire international, l’expertise locale de Horeb a rendu notre entrée sur le marché fluide.",
     },
     contact: {
       eyebrow: "Contact",
@@ -1897,6 +1897,17 @@ function highlightHoreb(text) {
   return escapeHtml(text).replace(/\bHoreb\b/gi, (match) => `<span class="text-gold">${match}</span>`);
 }
 
+function highlightExactPhrase(text, phrase) {
+  const safeText = escapeHtml(text);
+  const safePhrase = escapeHtml(phrase);
+
+  if (!safeText.includes(safePhrase)) {
+    return safeText;
+  }
+
+  return safeText.replaceAll(safePhrase, `<span class="text-gold">${safePhrase}</span>`);
+}
+
 function philosophyQuoteHtml(lang) {
   const paragraphsByLang = {
     fr: [
@@ -2172,14 +2183,20 @@ function bulletList(items) {
   `;
 }
 
-function imageCard({ src, alt, badge, caption, ratio = "portrait", contain = false }) {
+function imageCard({ src, alt, badge, caption, captionHtml = "", ratio = "portrait", contain = false }) {
   return `
     <div class="media-card media-card--${ratio} reveal">
       <img class="media-card__image ${contain ? "media-card__image--contain" : ""}" src="${src}" alt="${escapeHtml(alt)}" loading="lazy" />
       <div class="media-card__overlay">
         <div>
           <div class="media-card__badge">${escapeHtml(badge)}</div>
-          ${caption ? `<p class="media-card__caption">${highlightHoreb(caption)}</p>` : ""}
+          ${
+            captionHtml
+              ? `<p class="media-card__caption">${captionHtml}</p>`
+              : caption
+                ? `<p class="media-card__caption">${highlightHoreb(caption)}</p>`
+                : ""
+          }
         </div>
       </div>
     </div>
@@ -2256,6 +2273,7 @@ function renderHero({ eyebrow, title, subtitle, ctaText, ctaHref, poster = "img/
 
 function renderHome(lang, data) {
   const content = homeExperience[lang] || homeExperience.fr;
+  const goldPartnerPhrase = "Horeb, votre partenaire de confiance dans l'industrie minière";
 
   const opportunityCards = content.opportunity.items
     .map((item, index) => cardHtml(item, index * 70))
@@ -2343,7 +2361,7 @@ function renderHome(lang, data) {
         <div class="hero__copy page-hero__copy--center reveal" style="--delay:80ms">
           <p class="eyebrow">${escapeHtml(content.hero.eyebrow)}</p>
           <h1 class="hero__title">${escapeHtml(content.hero.title)}</h1>
-          <p class="hero__subtitle">${escapeHtml(content.hero.subtitle)}</p>
+          <p class="hero__subtitle">${highlightExactPhrase(content.hero.subtitle, goldPartnerPhrase)}</p>
           <div class="home-hero__lines">
             ${content.hero.lines.map((line) => `<span>${escapeHtml(line)}</span>`).join("")}
           </div>
@@ -2390,13 +2408,13 @@ function renderHome(lang, data) {
               src: "img/team-collaboration-clean.jpg",
               alt: content.meet.eyebrow,
               badge: content.meet.businessPartner,
-              caption: content.meet.partner,
+              captionHtml: highlightExactPhrase(content.meet.partner, goldPartnerPhrase),
               ratio: "landscape",
             })}
             <div class="meet-horeb__copy reveal" style="--delay:80ms">
               <p class="eyebrow">${escapeHtml(content.meet.eyebrow)}</p>
               <h2 class="section-title">${escapeHtml(content.meet.title)}</h2>
-              <p class="meet-horeb__partner">${highlightHoreb(content.meet.partner)}</p>
+              <p class="meet-horeb__partner">${highlightExactPhrase(content.meet.partner, goldPartnerPhrase)}</p>
               ${content.meet.copy.map((paragraph) => `<p class="section-copy">${escapeHtml(paragraph)}</p>`).join("")}
               <div class="business-partner-ribbon">${escapeHtml(content.meet.businessPartner)}</div>
               <a class="btn btn--solid" href="${pageHref("about", lang)}">${escapeHtml(content.meet.button)} ${icons.arrow}</a>
@@ -2637,7 +2655,7 @@ function renderServices(lang, data) {
             ${imageCard({
               src: "img/chemical-lab.png",
               alt: "Laboratoire contrôle qualité soufre et minéraux",
-              badge: "Soufre & Produits Chimiques",
+              badge: "Soufre, Acide Sulfurique & Autres Produits Chimiques",
               caption: "Contrôle qualité strict et sécurité absolue pour la fourniture de réactifs industriels.",
               ratio: "landscape",
             })}
