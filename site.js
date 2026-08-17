@@ -2273,7 +2273,13 @@ function renderHero({ eyebrow, title, subtitle, ctaText, ctaHref, poster = "img/
 
 function renderHome(lang, data) {
   const content = homeExperience[lang] || homeExperience.fr;
-  const goldPartnerPhrase = "Horeb, votre partenaire de confiance dans l'industrie minière";
+  const goldPartnerPhraseByLang = {
+    fr: "Horeb, votre partenaire de confiance dans l'industrie minière.",
+    en: "Horeb, your trusted partner in Congolese mining.",
+    zh: "Horeb，您在刚果矿业领域值得信赖的合作伙伴。",
+    sw: "Horeb, mshirika wako wa kuaminika katika sekta ya madini ya Kongo.",
+  };
+  const goldPartnerPhrase = goldPartnerPhraseByLang[lang] || goldPartnerPhraseByLang.fr;
 
   const opportunityCards = content.opportunity.items
     .map((item, index) => cardHtml(item, index * 70))
